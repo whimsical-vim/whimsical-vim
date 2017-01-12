@@ -10,7 +10,6 @@ todo
 elmcast/elm-vim
 incsearch (check if still necessary neovim)
 lightline / flagship
-(autopairs)
 ctrlp / fzf + bufkill
 dirvish
 gotham
