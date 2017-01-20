@@ -67,6 +67,7 @@ Plug 'tpope/vim-surround'                                       " Commands to wo
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
 Plug 'vim-scripts/CursorLineCurrentWindow'                      " Only show the cursorline in the active window
 Plug 'whatyouhide/vim-gotham'
+Plug 'justinmk/vim-dirvish'                                              " netrw replacement
 call plug#end()
 
 " # Plugin configuration
