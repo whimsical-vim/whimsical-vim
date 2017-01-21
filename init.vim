@@ -129,6 +129,13 @@ tnoremap <C-K> <C-\><C-n><C-W><C-K>
 tnoremap <C-L> <C-\><C-n><C-W><C-L>
 tnoremap <C-H> <C-\><C-n><C-W><C-H>
 
+" run macros on a visual selection
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction
+
 " # Autocmds
 augroup customCommands
   autocmd!
