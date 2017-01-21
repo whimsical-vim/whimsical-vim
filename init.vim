@@ -126,6 +126,14 @@ tnoremap <C-K> <C-\><C-n><C-W><C-K>
 tnoremap <C-L> <C-\><C-n><C-W><C-L>
 tnoremap <C-H> <C-\><C-n><C-W><C-H>
 
+" indentation
+" keep selection when indenting a visual selection
+vnoremap > > gv
+vnoremap < < gv
+" press > once instead of twice to indent
+nnoremap > V>><Esc>
+nnoremap < V<<<Esc>
+
 " # Autocmds
 augroup customCommands
   autocmd!
