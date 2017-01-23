@@ -133,6 +133,14 @@ tnoremap <C-H> <C-\><C-n><C-W><C-H>
 vnoremap > > gv
 vnoremap < < gv
 
+" tabs
+nnoremap <leader>tt :tabnew<cr>
+nnoremap <leader>tc :tabclose<cr>
+
+" git
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gd :Gdiff<cr>
+
 " # Autocmds
 augroup customCommands
   autocmd!
