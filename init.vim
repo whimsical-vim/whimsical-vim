@@ -37,6 +37,7 @@ set undofile
 set wildignorecase
 set wildmenu
 set wildmode=full
+set path=**
 
 " # Plugins
 call plug#begin('~/.vim/plugged')
