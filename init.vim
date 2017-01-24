@@ -105,8 +105,6 @@ let maplocalleader="\\"
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
-" fzf mappings
-nnoremap <leader><leader> :Commands<cr>
 
 " Easy movement between windows
 nnoremap <C-J> <C-W><C-J>
@@ -120,6 +118,7 @@ nnoremap <silent> <leader>c :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart
 " Perform fuzzy file searching
 nnoremap <C-P> mN:Files<cr>
 nnoremap <C-B> mN:Buffers<CR>
+nnoremap <leader><leader> mN:Commands<cr>
 
 " Hightlight all incremental search results
 map /  <plug>(incsearch-forward)
