@@ -102,8 +102,6 @@ let maplocalleader="\\"
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
-" Elm mappings
-
 " Easy movement between windows
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
