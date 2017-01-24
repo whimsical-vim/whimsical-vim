@@ -70,6 +70,7 @@ Plug 'vim-scripts/CursorLineCurrentWindow'                      " Only show the 
 Plug 'whatyouhide/vim-gotham'
 Plug 'justinmk/vim-dirvish'                                     " netrw replacement
 Plug 'tommcdo/vim-exchange'                                     " text exchange operator
+Plug 'mattn/emmet-vim'                                          " shortcut to write html (elm-html)
 call plug#end()
 
 " # Plugin configuration
@@ -85,6 +86,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_elm_checkers = ['elm_make']
+let g:user_emmet_install_global = 0
+let g:user_emmet_leader_key='<C-Z>'
 colorscheme gotham
 
 " # Misc configuration
@@ -168,4 +171,5 @@ augroup customCommands
   au FileType elm nnoremap <silent> <localleader>e <Plug>(elm-error-detail)
   au FileType elm nnoremap <silent> <localleader>d <Plug>(elm-show-docs)
   au FileType elm nnoremap <silent> <localleader>D <Plug>(elm-browse-docs)
+  au FileType html,css,elm EmmetInstall
 augroup END
