@@ -80,9 +80,11 @@ let g:elm_make_show_warnings = 1
 let g:elm_syntastic_show_warnings = 1
 let g:fzf_layout = { 'window': 'enew' }
 let g:lightline = { 'colorscheme': 'gotham' }
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_elm_checkers = ['elm_make']
 colorscheme gotham
 
 " # Misc configuration
@@ -159,7 +161,6 @@ augroup customCommands
     \ keepjumps call search('\V\^'.escape(b:dirvish['currentLine'],'\').'\$', 'cw')
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
-  au BufWritePost *.elm :ElmMake
   au FileType elm nnoremap <silent> <localleader>m <Plug>(elm-make)
   au FileType elm nnoremap <silent> <localleader>M <Plug>(elm-make-main)
   au FileType elm nnoremap <silent> <localleader>t <Plug>(elm-test)
