@@ -41,7 +41,6 @@ set path=**
 
 " # Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'bronson/vim-visual-star-search'                           " Easily search for the selected text
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
@@ -51,11 +50,16 @@ Plug 'haya14busa/incsearch.vim'                                 " Improved incre
 Plug 'itchyny/lightline.vim'                                    " Status bar
 Plug 'junegunn/fzf'                                             " Fuzzy file searching
 Plug 'junegunn/fzf.vim'
+Plug 'justinmk/vim-dirvish'                                     " netrw replacement
+Plug 'justinmk/vim-dirvish'                                     " netrw replacement
 Plug 'justinmk/vim-sneak'                                       " Medium-range motion
+Plug 'mattn/emmet-vim'                                          " shortcut to write html (elm-html)
 Plug 'qpkorr/vim-bufkill'                                       " Kill a buffer without closing its window
-Plug 'scrooloose/syntastic'                                     " Syntax checking
 Plug 'sheerun/vim-polyglot'                                     " Combines a whole bunch of vim syntax packs
+Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'stefandtw/quickfix-reflector.vim'                         " Make quickfix window editable
+Plug 'tommcdo/vim-exchange'                                     " text exchange operator
+Plug 'tommcdo/vim-exchange'                                     " text exchange operator
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
 Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
 Plug 'tpope/vim-eunuch'                                         " Unix commands
@@ -67,10 +71,8 @@ Plug 'tpope/vim-speeddating'                                    " Manipulation o
 Plug 'tpope/vim-surround'                                       " Commands to work with surroundings
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
 Plug 'vim-scripts/CursorLineCurrentWindow'                      " Only show the cursorline in the active window
+Plug 'w0rp/ale'                                                 " Asynchronous linter
 Plug 'whatyouhide/vim-gotham'
-Plug 'justinmk/vim-dirvish'                                     " netrw replacement
-Plug 'tommcdo/vim-exchange'                                     " text exchange operator
-Plug 'mattn/emmet-vim'                                          " shortcut to write html (elm-html)
 call plug#end()
 
 " # Plugin configuration
@@ -78,16 +80,12 @@ let g:deoplete#enable_at_startup = 1
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
-let g:elm_syntastic_show_warnings = 1
 let g:fzf_layout = { 'window': 'enew' }
 let g:lightline = { 'colorscheme': 'gotham' }
-let g:syntastic_check_on_wq = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_javascript_checkers = ['standard']
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_elm_checkers = ['elm_make']
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<C-Z>'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '✗'
 colorscheme gotham
 
 " # Misc configuration
