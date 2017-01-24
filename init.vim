@@ -118,8 +118,8 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <silent> <leader>c :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 
 " Perform fuzzy file searching
-nnoremap <C-P> :Files<CR>
-nnoremap <C-B> :Buffers<CR>
+nnoremap <C-P> mN:Files<cr>
+nnoremap <C-B> mN:Buffers<CR>
 
 " Hightlight all incremental search results
 map /  <plug>(incsearch-forward)
@@ -130,7 +130,7 @@ map g/ <plug>(incsearch-stay)
 nnoremap <silent> <C-T> :Ttoggle<cr>
 tnoremap <silent> <C-T> <C-\><C-n>:Ttoggle<cr>
 tnoremap <C-[> <C-\><C-n>
-tnoremap <C-O> <C-\><C-n><C-O><C-O>
+tnoremap <C-O> <C-\><C-n>`N
 tnoremap <C-J> <C-\><C-n><C-W><C-J>
 tnoremap <C-K> <C-\><C-n><C-W><C-K>
 tnoremap <C-L> <C-\><C-n><C-W><C-L>
