@@ -102,6 +102,8 @@ let maplocalleader="\\"
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
+" Elm mappings
+
 " Easy movement between windows
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -157,4 +159,13 @@ augroup customCommands
     \ sort ir /^.*[^\/]$/ |
     \ keepjumps call search('\V\^'.escape(b:dirvish['currentLine'],'\').'\$', 'cw')
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
+  " Elm key bindings
+  au BufWritePost *.elm :ElmMake
+  au FileType elm nnoremap <silent> <localleader>m <Plug>(elm-make)
+  au FileType elm nnoremap <silent> <localleader>M <Plug>(elm-make-main)
+  au FileType elm nnoremap <silent> <localleader>t <Plug>(elm-test)
+  au FileType elm nnoremap <silent> <localleader>r <Plug>(elm-repl)
+  au FileType elm nnoremap <silent> <localleader>e <Plug>(elm-error-detail)
+  au FileType elm nnoremap <silent> <localleader>d <Plug>(elm-show-docs)
+  au FileType elm nnoremap <silent> <localleader>D <Plug>(elm-browse-docs)
 augroup END
