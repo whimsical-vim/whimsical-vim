@@ -102,6 +102,9 @@ let maplocalleader="\\"
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
+" fzf mappings
+nnoremap <leader><leader> :Commands<cr>
+
 " Easy movement between windows
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
