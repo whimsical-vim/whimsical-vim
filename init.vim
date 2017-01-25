@@ -41,6 +41,7 @@ set path=**
 
 " # Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'bronson/vim-visual-star-search'                           " Easily search for the selected text
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
@@ -56,7 +57,7 @@ Plug 'justinmk/vim-sneak'                                       " Medium-range m
 Plug 'mattn/emmet-vim'                                          " shortcut to write html (elm-html)
 Plug 'qpkorr/vim-bufkill'                                       " Kill a buffer without closing its window
 Plug 'sheerun/vim-polyglot'                                     " Combines a whole bunch of vim syntax packs
-Plug 'Shougo/deoplete.nvim'                                     " Code completion
+Plug 'slashmili/alchemist.vim'                                  " mix integration for elixir
 Plug 'stefandtw/quickfix-reflector.vim'                         " Make quickfix window editable
 Plug 'tommcdo/vim-exchange'                                     " text exchange operator
 Plug 'tommcdo/vim-exchange'                                     " text exchange operator
