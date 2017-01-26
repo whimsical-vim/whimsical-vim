@@ -41,6 +41,7 @@ set path=**
 
 " # Plugins
 call plug#begin('~/.vim/plugged')
+Plug 'Shougo/deoplete.nvim'                                     " Code completion
 Plug 'airblade/vim-gitgutter'                                   " Column with line changes
 Plug 'bronson/vim-visual-star-search'                           " Easily search for the selected text
 Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
@@ -56,8 +57,9 @@ Plug 'justinmk/vim-sneak'                                       " Medium-range m
 Plug 'mattn/emmet-vim'                                          " shortcut to write html (elm-html)
 Plug 'qpkorr/vim-bufkill'                                       " Kill a buffer without closing its window
 Plug 'sheerun/vim-polyglot'                                     " Combines a whole bunch of vim syntax packs
-Plug 'Shougo/deoplete.nvim'                                     " Code completion
+Plug 'slashmili/alchemist.vim'                                  " mix integration for elixir
 Plug 'stefandtw/quickfix-reflector.vim'                         " Make quickfix window editable
+Plug 'thoughtbot/vim-rspec'
 Plug 'tommcdo/vim-exchange'                                     " text exchange operator
 Plug 'tommcdo/vim-exchange'                                     " text exchange operator
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
@@ -86,6 +88,7 @@ let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<C-Z>'
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '✗'
+let g:rspec_command = "tabnew | term bundle exec rspec {spec}"
 set bg=dark
 colorscheme NeoSolarized
 
@@ -172,6 +175,10 @@ augroup customCommands
   au FileType elm nnoremap <silent> <localleader>e <Plug>(elm-error-detail)
   au FileType elm nnoremap <silent> <localleader>d <Plug>(elm-show-docs)
   au FileType elm nnoremap <silent> <localleader>D <Plug>(elm-browse-docs)
+  au FileType ruby nnoremap <localleader>t :call RunCurrentSpecFile()<CR>
+  au FileType ruby nnoremap <localleader>s :call RunNearestSpec()<CR>
+  au FileType ruby nnoremap <localleader>l :call RunLastSpec()<CR>
+  au FileType ruby nnoremap <localleader>a :call RunAllSpecs()<CR>
   au FileType html,css,elm EmmetInstall
 augroup END
 
