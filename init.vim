@@ -55,6 +55,7 @@ Plug 'justinmk/vim-dirvish'                                     " netrw replacem
 Plug 'justinmk/vim-dirvish'                                     " netrw replacement
 Plug 'justinmk/vim-sneak'                                       " Medium-range motion
 Plug 'mattn/emmet-vim'                                          " shortcut to write html (elm-html)
+Plug 'mhinz/vim-signify'                                        " Column with line changes
 Plug 'qpkorr/vim-bufkill'                                       " Kill a buffer without closing its window
 Plug 'sheerun/vim-polyglot'                                     " Combines a whole bunch of vim syntax packs
 Plug 'slashmili/alchemist.vim'                                  " mix integration for elixir
