@@ -128,6 +128,7 @@ nnoremap <silent> <leader>c :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart
 nnoremap <C-P> mN:Files<cr>
 nnoremap <C-B> mN:Buffers<CR>
 nnoremap <leader><leader> mN:Commands<cr>
+nnoremap <leader>/ mN:Lines<cr>
 
 " Hightlight all incremental search results
 map /  <plug>(incsearch-forward)
