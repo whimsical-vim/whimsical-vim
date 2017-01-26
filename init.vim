@@ -72,7 +72,7 @@ Plug 'tpope/vim-surround'                                       " Commands to wo
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
 Plug 'vim-scripts/CursorLineCurrentWindow'                      " Only show the cursorline in the active window
 Plug 'w0rp/ale'                                                 " Asynchronous linter
-Plug 'whatyouhide/vim-gotham'
+Plug 'iCyMind/NeoSolarized'
 call plug#end()
 
 " # Plugin configuration
@@ -81,12 +81,13 @@ let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
 let g:fzf_layout = { 'window': 'enew' }
-let g:lightline = { 'colorscheme': 'gotham' }
+let g:lightline = { 'colorscheme': 'solarized' }
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<C-Z>'
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '✗'
-colorscheme gotham
+set bg=dark
+colorscheme NeoSolarized
 
 " # Misc configuration
 hi Comment cterm=italic
