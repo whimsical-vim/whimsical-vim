@@ -145,10 +145,6 @@ tnoremap <C-K> <C-\><C-n><C-W><C-K>
 tnoremap <C-L> <C-\><C-n><C-W><C-L>
 tnoremap <C-H> <C-\><C-n><C-W><C-H>
 
-" keep selection when indenting a visual selection
-vnoremap > > gv
-vnoremap < < gv
-
 " tabs
 nnoremap <leader>tt :tabnew<cr>
 nnoremap <leader>tc :tabclose<cr>
