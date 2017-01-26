@@ -39,6 +39,8 @@ set wildmenu
 set wildmode=full
 set path=**
 
+source ~/.theme.vim
+
 " # Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'Shougo/deoplete.nvim'                                     " Code completion
@@ -75,8 +77,12 @@ Plug 'tpope/vim-surround'                                       " Commands to wo
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
 Plug 'vim-scripts/CursorLineCurrentWindow'                      " Only show the cursorline in the active window
 Plug 'w0rp/ale'                                                 " Asynchronous linter
-Plug 'whatyouhide/vim-gotham'
+Plug g:theme_plug
 call plug#end()
+
+" Theme
+let g:lightline = { 'colorscheme': g:theme_lightline }
+call SetTheme()
 
 " # Plugin configuration
 let g:deoplete#enable_at_startup = 1
@@ -84,13 +90,11 @@ let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
 let g:fzf_layout = { 'window': 'enew' }
-let g:lightline = { 'colorscheme': 'gotham' }
 let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<C-Z>'
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
 let g:rspec_command = "tabnew | term bundle exec rspec {spec}"
-colorscheme gotham
 
 " # Misc configuration
 hi Comment cterm=italic
