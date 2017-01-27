@@ -93,7 +93,7 @@ let g:user_emmet_install_global = 0
 let g:user_emmet_leader_key='<C-Z>'
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
-let g:rspec_command = "tabnew | term bundle exec rspec {spec}"
+let g:rspec_command = "tabnew | term zeus rspec {spec}"
 
 " # Misc configuration
 hi Comment cterm=italic
