@@ -180,6 +180,9 @@ augroup customCommands
   au FileType ruby nnoremap <localleader>l :call RunLastSpec()<CR>
   au FileType ruby nnoremap <localleader>a :call RunAllSpecs()<CR>
   au FileType html,css,elm EmmetInstall
+  autocmd VimEnter *
+  \ command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
 augroup END
 
 " # Commands
