@@ -56,7 +56,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'                                     " netrw replacement
 Plug 'justinmk/vim-dirvish'                                     " netrw replacement
 Plug 'justinmk/vim-sneak'                                       " Medium-range motion
-Plug 'mattn/emmet-vim'                                          " shortcut to write html (elm-html)
 Plug 'qpkorr/vim-bufkill'                                       " Kill a buffer without closing its window
 Plug 'sheerun/vim-polyglot'                                     " Combines a whole bunch of vim syntax packs
 Plug 'slashmili/alchemist.vim'                                  " mix integration for elixir
@@ -89,8 +88,6 @@ let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:elm_format_autosave = 1
 let g:elm_make_show_warnings = 1
 let g:fzf_layout = { 'window': 'enew' }
-let g:user_emmet_install_global = 0
-let g:user_emmet_leader_key='<C-Z>'
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
 let g:rspec_command = "tabnew | term zeus rspec {spec}"
@@ -179,7 +176,6 @@ augroup customCommands
   au FileType ruby nnoremap <localleader>s :call RunNearestSpec()<CR>
   au FileType ruby nnoremap <localleader>l :call RunLastSpec()<CR>
   au FileType ruby nnoremap <localleader>a :call RunAllSpecs()<CR>
-  au FileType html,css,elm EmmetInstall
   autocmd VimEnter *
   \ command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
