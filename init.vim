@@ -40,6 +40,7 @@ set wildmode=full
 set path=**
 
 source ~/.theme.vim
+source ~/.shell.vim
 
 " # Plugins
 call plug#begin('~/.vim/plugged')
@@ -51,16 +52,17 @@ Plug 'elentok/todo.vim'                                         " Todo.txt suppo
 Plug 'elmcast/elm-vim'                                          " Elm language syntac
 Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
 Plug 'itchyny/lightline.vim'                                    " Status bar
+Plug 'janko-m/vim-test'                                         " run tests async
 Plug 'junegunn/fzf'                                             " Fuzzy file searching
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'                                     " netrw replacement
 Plug 'justinmk/vim-dirvish'                                     " netrw replacement
 Plug 'justinmk/vim-sneak'                                       " Medium-range motion
+Plug 'kassio/neoterm'                                           " Wrapper of some neovim's :terminal functions.
 Plug 'qpkorr/vim-bufkill'                                       " Kill a buffer without closing its window
 Plug 'sheerun/vim-polyglot'                                     " Combines a whole bunch of vim syntax packs
 Plug 'slashmili/alchemist.vim'                                  " mix integration for elixir
 Plug 'stefandtw/quickfix-reflector.vim'                         " Make quickfix window editable
-Plug 'thoughtbot/vim-rspec'
 Plug 'tommcdo/vim-exchange'                                     " text exchange operator
 Plug 'tommcdo/vim-exchange'                                     " text exchange operator
 Plug 'tpope/vim-abolish'                                        " Working with variants of a world
@@ -81,6 +83,8 @@ call plug#end()
 " Theme
 let g:lightline = { 'colorscheme': g:theme_lightline }
 call SetTheme()
+" Shell
+call SetShell()
 
 " # Plugin configuration
 let g:deoplete#enable_at_startup = 1
@@ -90,7 +94,7 @@ let g:elm_make_show_warnings = 1
 let g:fzf_layout = { 'window': 'enew' }
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
-let g:rspec_command = "tabnew | term zeus rspec {spec}"
+let test#strategy = "neoterm"
 
 " # Misc configuration
 hi Comment cterm=italic
@@ -125,6 +129,13 @@ nnoremap <C-P> mN:Files<cr>
 nnoremap <C-B> mN:Buffers<CR>
 nnoremap <leader><leader> mN:Commands<cr>
 nnoremap <leader>/ mN:Lines<cr>
+
+" Terminal
+nnoremap <silent> <leader>cc :call neoterm#toggle()<cr>
+nnoremap <silent> <leader>co :call neoterm#open()<cr>
+nnoremap <silent> <leader>ch :call neoterm#close()<cr>
+nnoremap <silent> <leader>cl :call neoterm#clear()<cr>
+nnoremap <silent> <leader>ck :call neoterm#kill()<cr>
 
 " Hightlight all incremental search results
 map /  <plug>(incsearch-forward)
@@ -165,6 +176,11 @@ augroup customCommands
     \ keepjumps call search('\V\^'.escape(b:dirvish['currentLine'],'\').'\$', 'cw')
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
+  nmap <silent> <localleader>s :TestNearest<CR>
+  nmap <silent> <localleader>t :TestFile<CR>
+  nmap <silent> <localleader>a :TestSuite<CR>
+  nmap <silent> <localleader>l :TestLast<CR>
+  nmap <silent> <localleader>g :TestVisit<CR>
   au FileType elm nnoremap <silent> <localleader>m <Plug>(elm-make)
   au FileType elm nnoremap <silent> <localleader>M <Plug>(elm-make-main)
   au FileType elm nnoremap <silent> <localleader>t <Plug>(elm-test)
@@ -172,10 +188,6 @@ augroup customCommands
   au FileType elm nnoremap <silent> <localleader>e <Plug>(elm-error-detail)
   au FileType elm nnoremap <silent> <localleader>d <Plug>(elm-show-docs)
   au FileType elm nnoremap <silent> <localleader>D <Plug>(elm-browse-docs)
-  au FileType ruby nnoremap <localleader>t :call RunCurrentSpecFile()<CR>
-  au FileType ruby nnoremap <localleader>s :call RunNearestSpec()<CR>
-  au FileType ruby nnoremap <localleader>l :call RunLastSpec()<CR>
-  au FileType ruby nnoremap <localleader>a :call RunAllSpecs()<CR>
   autocmd VimEnter *
   \ command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
