@@ -176,11 +176,6 @@ augroup customCommands
     \ keepjumps call search('\V\^'.escape(b:dirvish['currentLine'],'\').'\$', 'cw')
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
-  nmap <silent> <localleader>s :TestNearest<CR>
-  nmap <silent> <localleader>t :TestFile<CR>
-  nmap <silent> <localleader>a :TestSuite<CR>
-  nmap <silent> <localleader>l :TestLast<CR>
-  nmap <silent> <localleader>g :TestVisit<CR>
   au FileType elm nnoremap <silent> <localleader>m <Plug>(elm-make)
   au FileType elm nnoremap <silent> <localleader>M <Plug>(elm-make-main)
   au FileType elm nnoremap <silent> <localleader>t <Plug>(elm-test)
@@ -188,6 +183,11 @@ augroup customCommands
   au FileType elm nnoremap <silent> <localleader>e <Plug>(elm-error-detail)
   au FileType elm nnoremap <silent> <localleader>d <Plug>(elm-show-docs)
   au FileType elm nnoremap <silent> <localleader>D <Plug>(elm-browse-docs)
+  nmap <silent> <localleader>s :TestNearest<CR>
+  nmap <silent> <localleader>t :TestFile<CR>
+  nmap <silent> <localleader>a :TestSuite<CR>
+  nmap <silent> <localleader>l :TestLast<CR>
+  nmap <silent> <localleader>g :TestVisit<CR>
   autocmd VimEnter *
   \ command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
