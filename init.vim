@@ -45,38 +45,42 @@ source ~/.shell.vim
 
 " # Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'Shougo/deoplete.nvim'                                     " Code completion
-Plug 'airblade/vim-gitgutter'                                   " Column with line changes
-Plug 'bronson/vim-visual-star-search'                           " Easily search for the selected text
-Plug 'editorconfig/editorconfig-vim'                            " Settings based on .editorconfig file
-Plug 'elentok/todo.vim'                                         " Todo.txt support
-Plug 'elmcast/elm-vim'                                          " Elm language syntac
-Plug 'haya14busa/incsearch.vim'                                 " Improved incremental searching
-Plug 'itchyny/lightline.vim'                                    " Status bar
-Plug 'janko-m/vim-test'                                         " run tests async
-Plug 'junegunn/fzf'                                             " Fuzzy file searching
-Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-vinegar'                                        " netrw replacement
-Plug 'justinmk/vim-sneak'                                       " Medium-range motion
-Plug 'kassio/neoterm'                                           " Wrapper of some neovim's :terminal functions.
-Plug 'qpkorr/vim-bufkill'                                       " Kill a buffer without closing its window
-Plug 'sheerun/vim-polyglot'                                     " Combines a whole bunch of vim syntax packs
-Plug 'slashmili/alchemist.vim'                                  " mix integration for elixir
-Plug 'stefandtw/quickfix-reflector.vim'                         " Make quickfix window editable
-Plug 'tommcdo/vim-exchange'                                     " text exchange operator
-Plug 'tommcdo/vim-exchange'                                     " text exchange operator
-Plug 'tpope/vim-abolish'                                        " Working with variants of a world
-Plug 'tpope/vim-commentary'                                     " (Un)commenting lines
-Plug 'tpope/vim-eunuch'                                         " Unix commands
-Plug 'tpope/vim-fugitive'                                       " GIT integration
-Plug 'tpope/vim-jdaddy'                                         " JSON manipulation commands
-Plug 'tpope/vim-repeat'                                         " Use dot operator with plugins
-Plug 'tpope/vim-sleuth'                                         " Detect indent style from a file
-Plug 'tpope/vim-speeddating'                                    " Manipulation of date strings
-Plug 'tpope/vim-surround'                                       " Commands to work with surroundings
-Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
-Plug 'vim-scripts/CursorLineCurrentWindow'                      " Only show the cursorline in the active window
-Plug 'w0rp/ale'                                                 " Asynchronous linter
+Plug 'Shougo/deoplete.nvim'                "  Code completion
+Plug 'airblade/vim-gitgutter'              "  Column with line changes
+Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
+Plug 'editorconfig/editorconfig-vim'       "  Settings based on .editorconfig file
+Plug 'elentok/todo.vim'                    "  Todo.txt support
+Plug 'elmcast/elm-vim'                     "  Elm language syntac
+Plug 'godlygeek/tabular'                   "  align stuff
+Plug 'haya14busa/incsearch.vim'            "  Improved incremental searching
+Plug 'itchyny/lightline.vim'               "  Status bar
+Plug 'janko-m/vim-test'                    "  run tests async
+Plug 'junegunn/fzf'                        "  Fuzzy file searching
+Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
+Plug 'justinmk/vim-dirvish'                "  netrw replacement
+Plug 'justinmk/vim-dirvish'                "  netrw replacement
+Plug 'justinmk/vim-sneak'                  "  Medium-range motion
+Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
+Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
+Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
+Plug 'slashmili/alchemist.vim'             "  mix integration for elixir
+Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
+Plug 'tommcdo/vim-exchange'                "  text exchange operator
+Plug 'tommcdo/vim-exchange'                "  text exchange operator
+Plug 'tpope/vim-abolish'                   "  Working with variants of a world
+Plug 'tpope/vim-commentary'                "  (Un)commenting lines
+Plug 'tpope/vim-eunuch'                    "  Unix commands
+Plug 'tpope/vim-fugitive'                  "  GIT integration
+Plug 'tpope/vim-jdaddy'                    "  JSON manipulation commands
+Plug 'tpope/vim-repeat'                    "  Use dot operator with plugins
+Plug 'tpope/vim-sleuth'                    "  Detect indent style from a file
+Plug 'tpope/vim-speeddating'               "  Manipulation of date strings
+Plug 'tpope/vim-surround'                  "  Commands to work with surroundings
+Plug 'tpope/vim-unimpaired'                "  Miscellaneous commands
+Plug 'tpope/vim-vinegar'                   " netrw replacement
+Plug 'troydm/zoomwintab.vim'               "  zoom windows with <c-w>o
+Plug 'vim-scripts/CursorLineCurrentWindow' "  Only show the cursorline in the active window
+Plug 'w0rp/ale'                            "  Asynchronous linter
 Plug g:theme_plug
 call plug#end()
 
@@ -122,7 +126,7 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Smart redraw (also clears current search highlighting)
-nnoremap <silent> <leader>c :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
+nnoremap <silent> <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 
 " Perform fuzzy file searching
 nnoremap <C-P> mN:Files<cr>
@@ -151,6 +155,10 @@ tnoremap <C-J> <C-\><C-n><C-W><C-J>
 tnoremap <C-K> <C-\><C-n><C-W><C-K>
 tnoremap <C-L> <C-\><C-n><C-W><C-L>
 tnoremap <C-H> <C-\><C-n><C-W><C-H>
+tnoremap <C-W><C-J> <C-\><C-n><C-W><C-J>
+tnoremap <C-W><C-K> <C-\><C-n><C-W><C-K>
+tnoremap <C-W><C-L> <C-\><C-n><C-W><C-L>
+tnoremap <C-W><C-H> <C-\><C-n><C-W><C-H>
 
 " tabs
 nnoremap <leader>tt :tabnew<cr>
