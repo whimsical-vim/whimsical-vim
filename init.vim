@@ -38,6 +38,7 @@ set wildignorecase
 set wildmenu
 set wildmode=full
 set path=**
+let g:netrw_liststyle=1
 
 source ~/.theme.vim
 source ~/.shell.vim
@@ -76,6 +77,7 @@ Plug 'tpope/vim-sleuth'                    "  Detect indent style from a file
 Plug 'tpope/vim-speeddating'               "  Manipulation of date strings
 Plug 'tpope/vim-surround'                  "  Commands to work with surroundings
 Plug 'tpope/vim-unimpaired'                "  Miscellaneous commands
+Plug 'tpope/vim-vinegar'                   " netrw replacement
 Plug 'troydm/zoomwintab.vim'               "  zoom windows with <c-w>o
 Plug 'vim-scripts/CursorLineCurrentWindow' "  Only show the cursorline in the active window
 Plug 'w0rp/ale'                            "  Asynchronous linter
@@ -173,13 +175,9 @@ augroup customCommands
   autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<cr>
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile *.sjs set filetype=javascript
-  autocmd FileType dirvish setlocal nonumber
   autocmd WinEnter term://* startinsert
   autocmd BufLeave *;#FZF silent! BD!
   " Sort files in buffer, but keep the cursor on the file we came from.
-  autocmd FileType dirvish let b:dirvish['currentLine']=getline('.') |
-    \ sort ir /^.*[^\/]$/ |
-    \ keepjumps call search('\V\^'.escape(b:dirvish['currentLine'],'\').'\$', 'cw')
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
   au FileType elm nnoremap <silent> <localleader>m <Plug>(elm-make)
