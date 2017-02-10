@@ -76,6 +76,7 @@ Plug 'tpope/vim-speeddating'                                    " Manipulation o
 Plug 'tpope/vim-surround'                                       " Commands to work with surroundings
 Plug 'tpope/vim-unimpaired'                                     " Miscellaneous commands
 Plug 'vim-scripts/CursorLineCurrentWindow'                      " Only show the cursorline in the active window
+Plug 'troydm/zoomwintab.vim'                                    " zoom windows with <c-w>o
 Plug 'w0rp/ale'                                                 " Asynchronous linter
 Plug g:theme_plug
 call plug#end()
