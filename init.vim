@@ -175,13 +175,9 @@ augroup customCommands
   autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<cr>
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile *.sjs set filetype=javascript
-  autocmd FileType dirvish setlocal nonumber
   autocmd WinEnter term://* startinsert
   autocmd BufLeave *;#FZF silent! BD!
   " Sort files in buffer, but keep the cursor on the file we came from.
-  autocmd FileType dirvish let b:dirvish['currentLine']=getline('.') |
-    \ sort ir /^.*[^\/]$/ |
-    \ keepjumps call search('\V\^'.escape(b:dirvish['currentLine'],'\').'\$', 'cw')
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
   au FileType elm nnoremap <silent> <localleader>m <Plug>(elm-make)
