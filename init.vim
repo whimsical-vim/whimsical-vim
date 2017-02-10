@@ -38,6 +38,7 @@ set wildignorecase
 set wildmenu
 set wildmode=full
 set path=**
+let g:netrw_liststyle=1
 
 source ~/.theme.vim
 source ~/.shell.vim
@@ -55,8 +56,7 @@ Plug 'itchyny/lightline.vim'                                    " Status bar
 Plug 'janko-m/vim-test'                                         " run tests async
 Plug 'junegunn/fzf'                                             " Fuzzy file searching
 Plug 'junegunn/fzf.vim'
-Plug 'justinmk/vim-dirvish'                                     " netrw replacement
-Plug 'justinmk/vim-dirvish'                                     " netrw replacement
+Plug 'tpope/vim-vinegar'                                        " netrw replacement
 Plug 'justinmk/vim-sneak'                                       " Medium-range motion
 Plug 'kassio/neoterm'                                           " Wrapper of some neovim's :terminal functions.
 Plug 'qpkorr/vim-bufkill'                                       " Kill a buffer without closing its window
