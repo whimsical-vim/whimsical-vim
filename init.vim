@@ -153,6 +153,10 @@ tnoremap <C-J> <C-\><C-n><C-W><C-J>
 tnoremap <C-K> <C-\><C-n><C-W><C-K>
 tnoremap <C-L> <C-\><C-n><C-W><C-L>
 tnoremap <C-H> <C-\><C-n><C-W><C-H>
+tnoremap <C-W><C-J> <C-\><C-n><C-W><C-J>
+tnoremap <C-W><C-K> <C-\><C-n><C-W><C-K>
+tnoremap <C-W><C-L> <C-\><C-n><C-W><C-L>
+tnoremap <C-W><C-H> <C-\><C-n><C-W><C-H>
 
 " tabs
 nnoremap <leader>tt :tabnew<cr>
