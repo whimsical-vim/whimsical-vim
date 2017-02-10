@@ -122,6 +122,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <C-M> :ZoomWinTabToggle<cr>
 
 " Smart redraw (also clears current search highlighting)
 nnoremap <silent> <leader>c :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
@@ -153,6 +154,7 @@ tnoremap <C-J> <C-\><C-n><C-W><C-J>
 tnoremap <C-K> <C-\><C-n><C-W><C-K>
 tnoremap <C-L> <C-\><C-n><C-W><C-L>
 tnoremap <C-H> <C-\><C-n><C-W><C-H>
+tnoremap <C-M> <C-\><C-n>:ZoomWinTabToggle<cr>
 
 " tabs
 nnoremap <leader>tt :tabnew<cr>
