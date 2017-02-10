@@ -57,8 +57,6 @@ Plug 'itchyny/lightline.vim'               "  Status bar
 Plug 'janko-m/vim-test'                    "  run tests async
 Plug 'junegunn/fzf'                        "  Fuzzy file searching
 Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
-Plug 'justinmk/vim-dirvish'                "  netrw replacement
-Plug 'justinmk/vim-dirvish'                "  netrw replacement
 Plug 'justinmk/vim-sneak'                  "  Medium-range motion
 Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
 Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
