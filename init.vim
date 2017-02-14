@@ -83,7 +83,18 @@ Plug g:theme_plug
 call plug#end()
 
 " Theme
-let g:lightline = { 'colorscheme': g:theme_lightline }
+let g:lightline = {
+  \   'colorscheme': g:theme_lightline,
+  \   'active': {
+  \     'left': [
+  \       [ 'mode', 'paste' ],
+  \       [ 'readonly', 'filename', 'modified', 'ale' ]
+  \     ]
+  \   },
+  \   'component_function': {
+  \     'ale': 'ALEGetStatusLine'
+  \   }
+  \ }
 call SetTheme()
 " Shell
 call SetShell()
@@ -96,6 +107,7 @@ let g:elm_make_show_warnings = 1
 let g:fzf_layout = { 'window': 'enew' }
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
+let g:ale_statusline_format = ['✗ %d', '! %d', '✓']
 let test#strategy = "neoterm"
 
 " # Misc configuration
