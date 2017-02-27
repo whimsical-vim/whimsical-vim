@@ -82,13 +82,6 @@ let maplocalleader="\\"
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
-
-" Easy movement between windows
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
 " Smart redraw (also clears current search highlighting)
 nnoremap <silent> <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 
@@ -115,14 +108,6 @@ nnoremap <silent> <C-T> :Ttoggle<cr>
 tnoremap <silent> <C-T> <C-\><C-n>:Ttoggle<cr>
 tnoremap <C-[> <C-\><C-n>
 tnoremap <C-O> <C-\><C-n>`N
-tnoremap <C-J> <C-\><C-n><C-W><C-J>
-tnoremap <C-K> <C-\><C-n><C-W><C-K>
-tnoremap <C-L> <C-\><C-n><C-W><C-L>
-tnoremap <C-H> <C-\><C-n><C-W><C-H>
-tnoremap <C-W><C-J> <C-\><C-n><C-W><C-J>
-tnoremap <C-W><C-K> <C-\><C-n><C-W><C-K>
-tnoremap <C-W><C-L> <C-\><C-n><C-W><C-L>
-tnoremap <C-W><C-H> <C-\><C-n><C-W><C-H>
 
 " tabs
 nnoremap <leader>tt :tabnew<cr>
