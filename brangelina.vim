@@ -62,6 +62,7 @@ let g:fzf_layout = { 'window': 'enew' }
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
 let g:ale_statusline_format = ['✗ %d', '! %d', '✓']
+let g:elm_setup_keybindings = 0
 let test#strategy = "neoterm"
 
 " # Misc configuration
@@ -129,13 +130,13 @@ augroup customCommands
   " Sort files in buffer, but keep the cursor on the file we came from.
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
-  au FileType elm nnoremap <silent> <localleader>m <Plug>(elm-make)
-  au FileType elm nnoremap <silent> <localleader>M <Plug>(elm-make-main)
-  au FileType elm nnoremap <silent> <localleader>t <Plug>(elm-test)
-  au FileType elm nnoremap <silent> <localleader>r <Plug>(elm-repl)
-  au FileType elm nnoremap <silent> <localleader>e <Plug>(elm-error-detail)
-  au FileType elm nnoremap <silent> <localleader>d <Plug>(elm-show-docs)
-  au FileType elm nnoremap <silent> <localleader>D <Plug>(elm-browse-docs)
+  au FileType elm nmap <buffer> <localleader>m <Plug>(elm-make)
+  au FileType elm nmap <buffer> <localleader>M <Plug>(elm-make-main)
+  au FileType elm nmap <buffer> <localleader>t <Plug>(elm-test)
+  au FileType elm nmap <buffer> <localleader>r <Plug>(elm-repl)
+  au FileType elm nmap <buffer> <localleader>e <Plug>(elm-error-detail)
+  au FileType elm nmap <buffer> <localleader>d <Plug>(elm-show-docs)
+  au FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
   nmap <silent> <localleader>s :TestNearest<CR>
   nmap <silent> <localleader>t :TestFile<CR>
   nmap <silent> <localleader>a :TestSuite<CR>
