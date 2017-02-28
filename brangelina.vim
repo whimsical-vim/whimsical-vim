@@ -186,6 +186,7 @@ function! BrangelinaPlugins()
   Plug 'janko-m/vim-test'                    "  run tests async
   Plug 'junegunn/fzf'                        "  Fuzzy file searching
   Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
+  Plug 'junegunn/vader.vim'                  "  vim test framework
   Plug 'justinmk/vim-sneak'                  "  Medium-range motion
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
   Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
