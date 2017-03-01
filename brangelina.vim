@@ -56,7 +56,7 @@ let g:lightline = {
 " # Plugin configuration
 let g:deoplete#enable_at_startup = 1
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
-let g:elm_format_autosave = 1
+let g:elm_format_autosave = 0
 let g:elm_make_show_warnings = 1
 let g:fzf_layout = { 'window': 'enew' }
 let g:ale_sign_error = '✗'
@@ -146,6 +146,10 @@ augroup customCommands
   \ command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
 augroup END
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * Neoformat
+augroup END
 
 " # Commands
 " reload .config/nvim/init.vim
@@ -176,7 +180,6 @@ endfun
 function! BrangelinaPlugins()
   Plug 'Shougo/deoplete.nvim'                "  Code completion
   Plug 'airblade/vim-gitgutter'              "  Column with line changes
-  Plug 'alx741/vim-hindent'                  "  haskell pretty printer
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
   Plug 'editorconfig/editorconfig-vim'       "  Settings based on .editorconfig file
   Plug 'elentok/todo.vim'                    "  Todo.txt support
@@ -191,6 +194,7 @@ function! BrangelinaPlugins()
   Plug 'justinmk/vim-sneak'                  "  Medium-range motion
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
   Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
+  Plug 'sbdchd/neoformat'
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'slashmili/alchemist.vim'             "  mix integration for elixir
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
