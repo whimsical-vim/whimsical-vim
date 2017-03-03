@@ -134,9 +134,9 @@ augroup customCommands
   au FileType elm nmap <buffer> <localleader>M <Plug>(elm-make-main)
   au FileType elm nmap <buffer> <localleader>t <Plug>(elm-test)
   au FileType elm nmap <buffer> <localleader>r <Plug>(elm-repl)
-  au FileType elm nmap <buffer> <localleader>e <Plug>(elm-error-detail)
   au FileType elm nmap <buffer> <localleader>d <Plug>(elm-show-docs)
   au FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
+  nmap <silent> <localleader>e <Plug>(ale_detail)
   nmap <silent> <localleader>s :TestNearest<CR>
   nmap <silent> <localleader>t :TestFile<CR>
   nmap <silent> <localleader>a :TestSuite<CR>
