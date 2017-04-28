@@ -64,6 +64,7 @@ let g:ale_sign_warning = '!'
 let g:ale_statusline_format = ['✗ %d', '! %d', '✓']
 let g:elm_setup_keybindings = 0
 let test#strategy = "neoterm"
+let g:ale_linters = { 'haskell': ['hdevtools'] }
 
 " # Misc configuration
 hi Comment cterm=italic
