@@ -147,6 +147,7 @@ augroup customCommands
   \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
   autocmd BufWritePre *.elm Neoformat
   autocmd BufWritePre *.hs Neoformat
+  autocmd BufWritePre *.js Neoformat
 augroup END
 
 " # Commands
