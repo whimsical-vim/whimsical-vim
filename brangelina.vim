@@ -81,7 +81,7 @@ endfunction
 
 " # Mappings
 let g:mapleader=' '
-let g:maplocalleader='\\'
+let g:maplocalleader='\'
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
