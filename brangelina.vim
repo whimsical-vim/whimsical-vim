@@ -3,12 +3,13 @@ filetype plugin indent on
 runtime! macros/matchit.vim
 syntax on
 
+set encoding=utf-8
+:scriptencoding utf-8
 set backspace=2
 set clipboard=unnamed
 set completeopt+=longest
 set completeopt-=preview
 set cursorline
-set encoding=utf-8
 set expandtab
 set hidden
 set history=1000
@@ -63,24 +64,24 @@ let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
 let g:ale_statusline_format = ['✗ %d', '! %d', '✓']
 let g:elm_setup_keybindings = 0
-let test#strategy = "neoterm"
 let g:ale_linters = { 'haskell': ['hdevtools'] }
+let g:test#strategy = 'neoterm'
 
 " # Misc configuration
 hi Comment cterm=italic
 
 if !isdirectory(expand(&undodir))
-   call mkdir(expand(&undodir), "p")
+   call mkdir(expand(&undodir), 'p')
 endif
 
 function! ExecuteMacroOverVisualRange()
-  echo "@".getcmdline()
+  echo '@'.getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
 " # Mappings
-let mapleader=" "
-let maplocalleader="\\"
+let g:mapleader=' '
+let g:maplocalleader='\\'
 
 xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
@@ -159,21 +160,21 @@ command! ReloadConfig execute "source ~/.config/nvim/init.vim"
 command! -nargs=* Only call CloseHiddenBuffers()
 function! CloseHiddenBuffers()
     " figure out which buffers are visible in any tab
-    let visible = {}
-    for t in range(1, tabpagenr('$'))
-        for b in tabpagebuflist(t)
-            let visible[b] = 1
+    let l:visible = {}
+    for l:t in range(1, tabpagenr('$'))
+        for l:b in tabpagebuflist(l:t)
+            let l:visible[l:b] = 1
         endfor
     endfor
     " close any buffer that are loaded and not visible
     let l:tally = 0
-    for b in range(1, bufnr('$'))
-        if bufloaded(b) && !has_key(visible, b)
+    for l:b in range(1, bufnr('$'))
+        if bufloaded(l:b) && !has_key(l:visible, l:b)
             let l:tally += 1
-            exe 'bw ' . b
+            exe 'bw ' . l:b
         endif
     endfor
-    echon "Deleted " . l:tally . " buffers"
+    echon 'Deleted ' . l:tally . ' buffers'
 endfun
 
 
