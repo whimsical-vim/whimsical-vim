@@ -2,7 +2,7 @@
 
 ## Installation instructions
 - [Install Neovim, along with the Python2, Python3, and Ruby modules](https://github.com/neovim/neovim/wiki/Installing-Neovim)
-- Run `:Checkhealth` to ensure everything is working correctly
+- Run `:CheckHealth` to ensure everything is working correctly
 - [Install vim-plug](https://github.com/junegunn/vim-plug#installation)
 - Clone the brangelina repository
 - Create an `init.vim` file that sources `branglina.vim` in your cloned repo.
