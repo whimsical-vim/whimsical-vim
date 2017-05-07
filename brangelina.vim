@@ -147,6 +147,8 @@ augroup customCommands
   autocmd VimEnter *
   \ command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
+  " Open directory tree when opening nvim
+  autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
   autocmd BufWritePre *.elm Neoformat
   autocmd BufWritePre *.hs Neoformat
   autocmd BufWritePre *.js Neoformat
@@ -197,6 +199,7 @@ function! BrangelinaPlugins()
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
   Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
   Plug 'sbdchd/neoformat'
+  Plug 'scrooloose/nerdtree'                 "  Show directories tree
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'slashmili/alchemist.vim'             "  mix integration for elixir
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
