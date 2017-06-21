@@ -138,6 +138,8 @@ augroup customCommands
   au FileType elm nmap <buffer> <localleader>r <Plug>(elm-repl)
   au FileType elm nmap <buffer> <localleader>d <Plug>(elm-show-docs)
   au FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
+  au FileType elm set tabstop=4
+  au FileType elm set shiftwidth=4
   nmap <silent> <localleader>e <Plug>(ale_detail)
   nmap <silent> <localleader>s :TestNearest<CR>
   nmap <silent> <localleader>t :TestFile<CR>
@@ -188,6 +190,7 @@ function! BrangelinaPlugins()
   Plug 'elmcast/elm-vim'                     "  Elm language syntac
   Plug 'godlygeek/tabular'                   "  align stuff
   Plug 'haya14busa/incsearch.vim'            "  Improved incremental searching
+  Plug 'idris-hackers/idris-vim'             "  Idris mode
   Plug 'itchyny/lightline.vim'               "  Status bar
   Plug 'janko-m/vim-test'                    "  run tests async
   Plug 'junegunn/fzf'                        "  Fuzzy file searching
@@ -208,11 +211,12 @@ function! BrangelinaPlugins()
   Plug 'tpope/vim-fugitive'                  "  GIT integration
   Plug 'tpope/vim-jdaddy'                    "  JSON manipulation commands
   Plug 'tpope/vim-repeat'                    "  Use dot operator with plugins
+  Plug 'tpope/vim-rhubarb'                   "  Fugitive Github extension
   Plug 'tpope/vim-sleuth'                    "  Detect indent style from a file
   Plug 'tpope/vim-speeddating'               "  Manipulation of date strings
   Plug 'tpope/vim-surround'                  "  Commands to work with surroundings
   Plug 'tpope/vim-unimpaired'                "  Miscellaneous commands
-  Plug 'tpope/vim-vinegar'                   " netrw replacement
+  Plug 'tpope/vim-vinegar'                   "  netrw replacement
   Plug 'troydm/zoomwintab.vim'               "  zoom windows with <c-w>o
   Plug 'vim-scripts/CursorLineCurrentWindow' "  Only show the cursorline in the active window
   Plug 'w0rp/ale'                            "  Asynchronous linter
