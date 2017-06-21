@@ -138,6 +138,8 @@ augroup customCommands
   au FileType elm nmap <buffer> <localleader>r <Plug>(elm-repl)
   au FileType elm nmap <buffer> <localleader>d <Plug>(elm-show-docs)
   au FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
+  au FileType elm set tabstop=4
+  au FileType elm set shiftwidth=4
   nmap <silent> <localleader>e <Plug>(ale_detail)
   nmap <silent> <localleader>s :TestNearest<CR>
   nmap <silent> <localleader>t :TestFile<CR>
