@@ -188,6 +188,7 @@ function! BrangelinaPlugins()
   Plug 'elmcast/elm-vim'                     "  Elm language syntac
   Plug 'godlygeek/tabular'                   "  align stuff
   Plug 'haya14busa/incsearch.vim'            "  Improved incremental searching
+  Plug 'idris-hackers/idris-vim'             "  Idris support
   Plug 'itchyny/lightline.vim'               "  Status bar
   Plug 'janko-m/vim-test'                    "  run tests async
   Plug 'junegunn/fzf'                        "  Fuzzy file searching
