@@ -212,7 +212,6 @@ function! BrangelinaPlugins()
   Plug 'tpope/vim-jdaddy'                    "  JSON manipulation commands
   Plug 'tpope/vim-repeat'                    "  Use dot operator with plugins
   Plug 'tpope/vim-rhubarb'                   "  Fugitive Github extension
-  Plug 'tpope/vim-sleuth'                    "  Detect indent style from a file
   Plug 'tpope/vim-speeddating'               "  Manipulation of date strings
   Plug 'tpope/vim-surround'                  "  Commands to work with surroundings
   Plug 'tpope/vim-unimpaired'                "  Miscellaneous commands
