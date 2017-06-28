@@ -140,6 +140,7 @@ augroup customCommands
   au FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
   au FileType elm set tabstop=4
   au FileType elm set shiftwidth=4
+  autocmd FileType markdown let b:deoplete_disable_auto_complete = 1
   nmap <silent> <localleader>e <Plug>(ale_detail)
   nmap <silent> <localleader>s :TestNearest<CR>
   nmap <silent> <localleader>t :TestFile<CR>
