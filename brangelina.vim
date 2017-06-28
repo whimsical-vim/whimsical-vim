@@ -132,14 +132,15 @@ augroup customCommands
   " Sort files in buffer, but keep the cursor on the file we came from.
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
-  au FileType elm nmap <buffer> <localleader>m <Plug>(elm-make)
-  au FileType elm nmap <buffer> <localleader>M <Plug>(elm-make-main)
-  au FileType elm nmap <buffer> <localleader>t <Plug>(elm-test)
-  au FileType elm nmap <buffer> <localleader>r <Plug>(elm-repl)
-  au FileType elm nmap <buffer> <localleader>d <Plug>(elm-show-docs)
-  au FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
-  au FileType elm set tabstop=4
-  au FileType elm set shiftwidth=4
+  autocmd FileType elm nmap <buffer> <localleader>m <Plug>(elm-make)
+  autocmd FileType elm nmap <buffer> <localleader>M <Plug>(elm-make-main)
+  autocmd FileType elm nmap <buffer> <localleader>t <Plug>(elm-test)
+  autocmd FileType elm nmap <buffer> <localleader>r <Plug>(elm-repl)
+  autocmd FileType elm nmap <buffer> <localleader>d <Plug>(elm-show-docs)
+  autocmd FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
+  autocmd FileType elm set tabstop=4
+  autocmd FileType elm set shiftwidth=4
+  autocmd FileType markdown let b:deoplete_disable_auto_complete = 1
   nmap <silent> <localleader>e <Plug>(ale_detail)
   nmap <silent> <localleader>s :TestNearest<CR>
   nmap <silent> <localleader>t :TestFile<CR>
