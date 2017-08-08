@@ -178,6 +178,9 @@ function! CloseHiddenBuffers()
     endfor
     echon 'Deleted ' . l:tally . ' buffers'
 endfun
+" Support for a :Rg command (alternative for :Ag that uses ripgrep)
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
 
 
 " # Plugins
