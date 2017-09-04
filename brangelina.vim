@@ -88,6 +88,10 @@ xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 " Smart redraw (also clears current search highlighting)
 nnoremap <silent> <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
 
+" global search
+nnoremap <C-S> :Rg <C-R><C-W><CR>
+vnoremap <C-S> "yy<esc>:Rg <C-R>y<CR>
+
 " Perform fuzzy file searching
 nnoremap <C-P> mN:Files<cr>
 nnoremap <C-B> mN:Buffers<CR>
