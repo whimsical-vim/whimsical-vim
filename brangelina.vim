@@ -182,10 +182,15 @@ function! CloseHiddenBuffers()
     endfor
     echon 'Deleted ' . l:tally . ' buffers'
 endfun
-" Support for a :Rg command (alternative for :Ag that uses ripgrep)
-command! -bang -nargs=* Rg
-  \ call fzf#vim#grep('rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1, { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
 
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1,
+  \   fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' },'up:60%'),
+  \   <bang>0)
+
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('up:60%'), <bang>0)
 
 " # Plugins
 function! BrangelinaPlugins()
