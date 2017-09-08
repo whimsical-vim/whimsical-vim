@@ -190,7 +190,7 @@ command! -bang -nargs=* Rg
   \   <bang>0)
 
 command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('up:60%'), <bang>0)
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'up:60%'), <bang>0)
 
 " # Plugins
 function! BrangelinaPlugins()
