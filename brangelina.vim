@@ -186,11 +186,11 @@ endfun
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1,
-  \   fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' },'up:60%'),
+  \   fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-q:toggle-preview' },'up:60%'),
   \   <bang>0)
 
 command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, 'up:60%'), <bang>0)
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({ 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all,ctrl-q:toggle-preview' }, 'up:60%'), <bang>0)
 
 " # Plugins
 function! BrangelinaPlugins()
