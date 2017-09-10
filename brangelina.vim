@@ -95,8 +95,9 @@ vnoremap <C-S> "yy<esc>:Rg <C-R>y<CR>
 " Perform fuzzy file searching
 nnoremap <C-P> mN:Files<cr>
 nnoremap <C-B> mN:Buffers<CR>
+" `<C-_>` == `<C-/>` ¯\_(ツ)_/¯
+nnoremap <C-_> mN:Lines<cr>
 nnoremap <leader><leader> mN:Commands<cr>
-nnoremap <leader>/ mN:Lines<cr>
 
 " Terminal
 nnoremap <silent> <leader>cc :call neoterm#toggle()<cr>
