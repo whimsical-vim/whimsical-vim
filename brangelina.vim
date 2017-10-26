@@ -220,6 +220,8 @@ function! BrangelinaPlugins()
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
   Plug 'tpope/vim-abolish'                   "  Working with variants of a world
+  Plug 'kana/vim-textobj-user'               "  A requirement of nelstrom/vim-textobj-rubyblock
+  Plug 'nelstrom/vim-textobj-rubyblock'      "  Text objects for ruby code
   Plug 'tpope/vim-commentary'                "  (Un)commenting lines
   Plug 'tpope/vim-eunuch'                    "  Unix commands
   Plug 'tpope/vim-fugitive'                  "  GIT integration
