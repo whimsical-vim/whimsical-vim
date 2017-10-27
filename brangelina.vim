@@ -211,8 +211,10 @@ function! BrangelinaPlugins()
   Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
   Plug 'junegunn/vader.vim'                  "  vim test framework
   Plug 'justinmk/vim-sneak'                  "  Medium-range motion
+  Plug 'kana/vim-textobj-user'               "  A requirement of nelstrom/vim-textobj-rubyblock
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
   Plug 'machakann/vim-highlightedyank'
+  Plug 'nelstrom/vim-textobj-rubyblock'      "  Text objects for ruby code
   Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
   Plug 'sbdchd/neoformat'
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
