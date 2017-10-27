@@ -212,6 +212,7 @@ function! BrangelinaPlugins()
   Plug 'junegunn/vader.vim'                  "  vim test framework
   Plug 'justinmk/vim-sneak'                  "  Medium-range motion
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
+  Plug 'machakann/vim-highlightedyank'
   Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
   Plug 'sbdchd/neoformat'
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
