@@ -213,6 +213,7 @@ function! BrangelinaPlugins()
   Plug 'justinmk/vim-sneak'                  "  Medium-range motion
   Plug 'kana/vim-textobj-user'               "  A requirement of nelstrom/vim-textobj-rubyblock
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
+  Plug 'machakann/vim-highlightedyank'
   Plug 'nelstrom/vim-textobj-rubyblock'      "  Text objects for ruby code
   Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
   Plug 'sbdchd/neoformat'
