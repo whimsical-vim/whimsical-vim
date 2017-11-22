@@ -64,8 +64,11 @@ let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
 let g:ale_statusline_format = ['✗ %d', '! %d', '✓']
 let g:elm_setup_keybindings = 0
-let g:ale_linters = { 'haskell': ['hdevtools'] }
+let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
+let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
 let g:test#strategy = 'neoterm'
+let g:neoformat_enabled_haskell = ['hindent']
+let g:polyglot_disabled = ['haskell']
 
 " # Misc configuration
 hi Comment cterm=italic
@@ -211,12 +214,13 @@ function! BrangelinaPlugins()
   Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
   Plug 'junegunn/vader.vim'                  "  vim test framework
   Plug 'justinmk/vim-sneak'                  "  Medium-range motion
-  Plug 'kana/vim-textobj-user'               "  A requirement of nelstrom/vim-textobj-rubyblock
+  Plug 'kana/vim-textobj-user'               "  User-defined text objects
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
   Plug 'machakann/vim-highlightedyank'
-  Plug 'nelstrom/vim-textobj-rubyblock'      "  Text objects for ruby code
+  Plug 'nelstrom/vim-textobj-rubyblock'      "  Ruby-specific text objects
+  Plug 'neovimhaskell/haskell-vim'           "  Better syntax-hihglighting for haskell
   Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
-  Plug 'sbdchd/neoformat'
+  Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'slashmili/alchemist.vim'             "  mix integration for elixir
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
