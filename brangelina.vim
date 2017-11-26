@@ -67,7 +67,6 @@ let g:elm_setup_keybindings = 0
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
 let g:test#strategy = 'neoterm'
-let g:neoformat_enabled_haskell = ['hindent']
 let g:polyglot_disabled = ['haskell']
 let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
 
@@ -159,9 +158,7 @@ augroup customCommands
   autocmd VimEnter *
   \ command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
-  autocmd BufWritePre *.elm Neoformat
-  autocmd BufWritePre *.hs Neoformat
-  autocmd BufWritePre *.js Neoformat
+  autocmd BufWritePre * undojoin | Neoformat
 augroup END
 
 " # Commands
