@@ -56,7 +56,6 @@ let g:lightline = {
   \ }
 
 " # Plugin configuration
-let g:deoplete#enable_at_startup = 1
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:elm_format_autosave = 0
 let g:elm_make_show_warnings = 1
@@ -149,7 +148,6 @@ augroup customCommands
   autocmd FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
   autocmd FileType elm set tabstop=4
   autocmd FileType elm set shiftwidth=4
-  autocmd FileType markdown let b:deoplete_disable_auto_complete = 1
   nmap <silent> <localleader>e <Plug>(ale_detail)
   nmap <silent> <localleader>s :TestNearest<CR>
   nmap <silent> <localleader>t :TestFile<CR>
@@ -197,9 +195,6 @@ command! -bang -nargs=? -complete=dir Files
 
 " # Plugins
 function! BrangelinaPlugins()
-  Plug 'Shougo/deoplete.nvim'                "  Code completion
-  Plug 'roxma/vim-hug-neovim-rpc'
-  Plug 'roxma/nvim-yarp'
   Plug 'airblade/vim-gitgutter'              "  Column with line changes
   Plug 'amiorin/vim-fenced-code-blocks'      "  Edit code in Markdown code blocks
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
