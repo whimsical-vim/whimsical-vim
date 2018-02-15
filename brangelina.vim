@@ -40,6 +40,7 @@ set wildmenu
 set wildmode=full
 set path=**
 let g:netrw_liststyle=1
+let g:ale_lint_on_text_changed = 'never'
 
 " Theme
 let g:lightline = {
