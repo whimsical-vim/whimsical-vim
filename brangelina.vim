@@ -14,7 +14,7 @@ set expandtab
 set hidden
 set history=1000
 set hlsearch
-set inccommand=nosplit
+" doesn't work in vim8 set inccommand=nosplit
 set incsearch
 set laststatus=2
 set mouse=a
