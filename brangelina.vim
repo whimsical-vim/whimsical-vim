@@ -198,6 +198,8 @@ command! -bang -nargs=? -complete=dir Files
 " # Plugins
 function! BrangelinaPlugins()
   Plug 'Shougo/deoplete.nvim'                "  Code completion
+  Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'roxma/nvim-yarp'
   Plug 'airblade/vim-gitgutter'              "  Column with line changes
   Plug 'amiorin/vim-fenced-code-blocks'      "  Edit code in Markdown code blocks
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
