@@ -40,7 +40,6 @@ set wildmenu
 set wildmode=full
 set path=**
 let g:netrw_liststyle=1
-let g:ale_lint_on_text_changed = 'never'
 
 " Theme
 let g:lightline = {
@@ -69,6 +68,7 @@ let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
 let g:test#strategy = 'neoterm'
 let g:polyglot_disabled = ['haskell']
 let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
+let g:ale_elm_make_use_global=1
 
 " # Misc configuration
 hi Comment cterm=italic
