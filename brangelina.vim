@@ -69,6 +69,7 @@ let g:test#strategy = 'neoterm'
 let g:polyglot_disabled = ['haskell']
 let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
 let g:ale_elm_make_use_global=1
+let g:deoplete#enable_at_startup = 1
 
 " # Misc configuration
 hi Comment cterm=italic
@@ -195,6 +196,9 @@ command! -bang -nargs=? -complete=dir Files
 
 " # Plugins
 function! BrangelinaPlugins()
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'airblade/vim-gitgutter'              "  Column with line changes
   Plug 'amiorin/vim-fenced-code-blocks'      "  Edit code in Markdown code blocks
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
