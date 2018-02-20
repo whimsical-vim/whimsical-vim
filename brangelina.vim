@@ -137,7 +137,6 @@ augroup customCommands
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile *.sjs set filetype=javascript
   autocmd WinEnter term://* startinsert
-  autocmd BufLeave *;#FZF silent! BD!
   " Sort files in buffer, but keep the cursor on the file we came from.
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
@@ -219,7 +218,6 @@ function! BrangelinaPlugins()
   Plug 'machakann/vim-highlightedyank'
   Plug 'nelstrom/vim-textobj-rubyblock'      "  Ruby-specific text objects
   Plug 'neovimhaskell/haskell-vim'           "  Better syntax-hihglighting for haskell
-  Plug 'qpkorr/vim-bufkill'                  "  Kill a buffer without closing its window
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'slashmili/alchemist.vim'             "  mix integration for elixir
