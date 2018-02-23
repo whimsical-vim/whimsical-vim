@@ -1,6 +1,8 @@
 # Brangelina.vim
 
 ## Installation instructions
+- install vim8 with python3 support
+    `brew install vim --without-python --with-python3`
 - [Install Neovim, along with the Python2, Python3, and Ruby modules](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 - Run `:CheckHealth` to ensure everything is working correctly
 - [Install vim-plug](https://github.com/junegunn/vim-plug#installation)

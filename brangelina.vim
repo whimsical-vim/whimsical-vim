@@ -14,7 +14,7 @@ set expandtab
 set hidden
 set history=1000
 set hlsearch
-set inccommand=nosplit
+" doesn't work in vim8 set inccommand=nosplit
 set incsearch
 set laststatus=2
 set mouse=a
@@ -40,7 +40,6 @@ set wildmenu
 set wildmode=full
 set path=**
 let g:netrw_liststyle=1
-let g:ale_lint_on_text_changed = 'never'
 
 " Theme
 let g:lightline = {
@@ -56,7 +55,6 @@ let g:lightline = {
   \ }
 
 " # Plugin configuration
-let g:deoplete#enable_at_startup = 1
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:elm_format_autosave = 0
 let g:elm_make_show_warnings = 1
@@ -70,6 +68,8 @@ let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
 let g:test#strategy = 'neoterm'
 let g:polyglot_disabled = ['haskell']
 let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
+let g:ale_elm_make_use_global=1
+let g:deoplete#enable_at_startup = 1
 
 " # Misc configuration
 hi Comment cterm=italic
@@ -148,7 +148,6 @@ augroup customCommands
   autocmd FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
   autocmd FileType elm set tabstop=4
   autocmd FileType elm set shiftwidth=4
-  autocmd FileType markdown let b:deoplete_disable_auto_complete = 1
   nmap <silent> <localleader>e <Plug>(ale_detail)
   nmap <silent> <localleader>s :TestNearest<CR>
   nmap <silent> <localleader>t :TestFile<CR>
@@ -196,7 +195,9 @@ command! -bang -nargs=? -complete=dir Files
 
 " # Plugins
 function! BrangelinaPlugins()
-  Plug 'Shougo/deoplete.nvim'                "  Code completion
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'airblade/vim-gitgutter'              "  Column with line changes
   Plug 'amiorin/vim-fenced-code-blocks'      "  Edit code in Markdown code blocks
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
