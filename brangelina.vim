@@ -212,6 +212,7 @@ function! BrangelinaPlugins()
   Plug 'janko-m/vim-test'                    "  run tests async
   Plug 'junegunn/fzf'                        "  Fuzzy file searching
   Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
+  Plug 'junegunn/goyo.vim'                   "  A no-chrome mode for conentrated writing
   Plug 'junegunn/vader.vim'                  "  vim test framework
   Plug 'justinmk/vim-sneak'                  "  Medium-range motion
   Plug 'kana/vim-textobj-user'               "  User-defined text objects
