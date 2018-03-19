@@ -128,6 +128,7 @@ nnoremap <leader>tc :tabclose<cr>
 " git
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gd :Gdiff<cr>
+nnoremap <leader>gg :Twiggy<cr>
 
 " # Autocmds
 augroup customCommands
@@ -223,6 +224,7 @@ function! BrangelinaPlugins()
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'slashmili/alchemist.vim'             "  mix integration for elixir
+  Plug 'sodapopcan/vim-twiggy'               "  fugitve extension to manage branches
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
