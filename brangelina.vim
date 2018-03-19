@@ -197,8 +197,6 @@ command! -bang -nargs=? -complete=dir Files
 " # Plugins
 function! BrangelinaPlugins()
   Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'airblade/vim-gitgutter'              "  Column with line changes
   Plug 'amiorin/vim-fenced-code-blocks'      "  Edit code in Markdown code blocks
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
@@ -221,6 +219,8 @@ function! BrangelinaPlugins()
   Plug 'machakann/vim-highlightedyank'
   Plug 'nelstrom/vim-textobj-rubyblock'      "  Ruby-specific text objects
   Plug 'neovimhaskell/haskell-vim'           "  Better syntax-hihglighting for haskell
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'slashmili/alchemist.vim'             "  mix integration for elixir
