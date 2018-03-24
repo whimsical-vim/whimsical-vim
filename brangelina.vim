@@ -70,6 +70,7 @@ let g:polyglot_disabled = ['haskell']
 let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
 let g:ale_elm_make_use_global=1
 let g:deoplete#enable_at_startup = 1
+let g:asyncrun_open = 8
 
 " # Misc configuration
 hi Comment cterm=italic
@@ -102,6 +103,9 @@ nnoremap <C-B> mN:Buffers<CR>
 " `<C-_>` == `<C-/>` ¯\_(ツ)_/¯
 nnoremap <C-_> mN:Lines<cr>
 nnoremap <leader><leader> mN:Commands<cr>
+nnoremap <leader>/ mN:History/<cr>
+nnoremap <leader>: mN:History:<cr>
+nnoremap <leader>? mN:Helptags<cr>
 
 " Terminal
 nnoremap <silent> <leader>cc :call neoterm#toggle()<cr>
@@ -223,6 +227,7 @@ function! BrangelinaPlugins()
   Plug 'roxma/vim-hug-neovim-rpc'
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
+  Plug 'skywind3000/asyncrun.vim'
   Plug 'slashmili/alchemist.vim'             "  mix integration for elixir
   Plug 'sodapopcan/vim-twiggy'               "  fugitve extension to manage branches
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
