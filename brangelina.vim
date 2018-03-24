@@ -247,4 +247,5 @@ function! BrangelinaPlugins()
   Plug 'troydm/zoomwintab.vim'               "  zoom windows with <c-w>o
   Plug 'vim-scripts/CursorLineCurrentWindow' "  Only show the cursorline in the active window
   Plug 'w0rp/ale'                            "  Asynchronous linter
+  Plug 'wincent/terminus'
 endfunction
