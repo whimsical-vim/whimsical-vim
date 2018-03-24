@@ -105,6 +105,7 @@ nnoremap <C-_> mN:Lines<cr>
 nnoremap <leader><leader> mN:Commands<cr>
 nnoremap <leader>/ mN:History/<cr>
 nnoremap <leader>: mN:History:<cr>
+nnoremap <leader>? mN:Helptags<cr>
 
 " Terminal
 nnoremap <silent> <leader>cc :call neoterm#toggle()<cr>
