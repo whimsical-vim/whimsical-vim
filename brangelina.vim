@@ -72,6 +72,7 @@ let g:ale_elm_make_use_global=1
 let g:deoplete#enable_at_startup = 1
 let g:asyncrun_open = 8
 let g:neoterm_autoscroll = 1
+let g:neoterm_tnew_mod = 'horizontal'
 " # Misc configuration
 hi Comment cterm=italic
 
@@ -108,11 +109,12 @@ nnoremap <leader>: mN:History:<cr>
 nnoremap <leader>? mN:Helptags<cr>
 
 " Terminal
-nnoremap <silent> <leader>cc :call neoterm#toggle()<cr>
-nnoremap <silent> <leader>co :call neoterm#open()<cr>
-nnoremap <silent> <leader>ch :call neoterm#close()<cr>
-nnoremap <silent> <leader>cl :call neoterm#clear()<cr>
-nnoremap <silent> <leader>ck :call neoterm#kill()<cr>
+" 3<leader>cl will clear neoterm-3.
+nnoremap <localleader><localleader> :<c-u>exec v:count.'Ttoggle'<cr>
+nnoremap <localleader>c :<c-u>exec v:count.'Tclear'<cr>
+nnoremap <localleader>o :<c-u>exec v:count.'Topen'<cr>
+nnoremap <localleader>h :<c-u>exec v:count.'Tclose'<cr>
+nnoremap <localleader>k :<c-u>exec v:count.'Tkill'<cr>
 
 " Hightlight all incremental search results
 map /  <plug>(incsearch-forward)
@@ -138,7 +140,7 @@ nnoremap <leader>gg :Twiggy<cr>
 augroup customCommands
   autocmd!
   autocmd FileType markdown nnoremap <localleader>m :LivedownToggle<cr>
-  autocmd FileType javascript nnoremap <localleader>c :JSContextColorToggle<cr>
+  autocmd FileType javascript nnoremap <localleader>co :JSContextColorToggle<cr>
   autocmd BufRead,BufNewFile *.md set filetype=markdown
   autocmd BufRead,BufNewFile *.sjs set filetype=javascript
   autocmd WinEnter term://* startinsert
