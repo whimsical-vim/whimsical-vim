@@ -72,7 +72,6 @@ let g:ale_elm_make_use_global=1
 let g:deoplete#enable_at_startup = 1
 let g:asyncrun_open = 8
 let g:neoterm_autoscroll = 1
-let g:neoterm_default_mod = 'botright'
 let g:neoterm_autoinsert = 1
 " # Misc configuration
 hi Comment cterm=italic
@@ -110,23 +109,17 @@ nnoremap <leader>: mN:History:<cr>
 nnoremap <leader>? mN:Helptags<cr>
 
 " Terminal
-" 3<leader>cl will clear neoterm-3.
-nnoremap <localleader><localleader> :<c-u>exec 'botright '.v:count.'Ttoggle'<cr>
-nnoremap <localleader>c :<c-u>exec v:count.'Tclear'<cr>
-nnoremap <localleader>o :<c-u>exec 'botright '.v:count.'Topen'<cr>
-nnoremap <localleader>h :<c-u>exec v:count.'Tclose'<cr>
-nnoremap <localleader>k :<c-u>exec v:count.'Tkill'<cr>
+" Terminal mappings
+nnoremap <silent> <C-T> :<c-u>exec v:count.'Ttoggle'<cr>
+tnoremap <silent> <C-T> <C-\><C-n>:<c-u>exec v:count.'Ttoggle'<cr>
+tnoremap <C-[> <C-\><C-n>
+tnoremap <C-O> <C-\><C-n>`N
+
 
 " Hightlight all incremental search results
 map /  <plug>(incsearch-forward)
 map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
-
-" Terminal mappings
-nnoremap <silent> <C-T> :Ttoggle<cr>
-tnoremap <silent> <C-T> <C-\><C-n>:Ttoggle<cr>
-tnoremap <C-[> <C-\><C-n>
-tnoremap <C-O> <C-\><C-n>`N
 
 " tabs
 nnoremap <leader>tt :tabnew<cr>
