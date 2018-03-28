@@ -73,6 +73,7 @@ let g:deoplete#enable_at_startup = 1
 let g:asyncrun_open = 8
 let g:neoterm_autoscroll = 1
 let g:neoterm_autoinsert = 1
+let g:neoterm_default_mod = 'tab'
 " # Misc configuration
 hi Comment cterm=italic
 
