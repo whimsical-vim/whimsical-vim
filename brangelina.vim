@@ -72,7 +72,7 @@ let g:ale_elm_make_use_global=1
 let g:deoplete#enable_at_startup = 1
 let g:asyncrun_open = 8
 let g:neoterm_autoscroll = 1
-let g:neoterm_tnew_mod = 'horizontal'
+let g:neoterm_default_mod = 'botright'
 " # Misc configuration
 hi Comment cterm=italic
 
@@ -110,9 +110,9 @@ nnoremap <leader>? mN:Helptags<cr>
 
 " Terminal
 " 3<leader>cl will clear neoterm-3.
-nnoremap <localleader><localleader> :<c-u>exec v:count.'Ttoggle'<cr>
+nnoremap <localleader><localleader> :<c-u>exec 'botright '.v:count.'Ttoggle'<cr>
 nnoremap <localleader>c :<c-u>exec v:count.'Tclear'<cr>
-nnoremap <localleader>o :<c-u>exec v:count.'Topen'<cr>
+nnoremap <localleader>o :<c-u>exec 'botright '.v:count.'Topen'<cr>
 nnoremap <localleader>h :<c-u>exec v:count.'Tclose'<cr>
 nnoremap <localleader>k :<c-u>exec v:count.'Tkill'<cr>
 
