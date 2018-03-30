@@ -192,8 +192,8 @@ function! BrangelinaPlugins()
   Plug 'machakann/vim-highlightedyank'
   Plug 'mhinz/vim-startify'                  " startup page
   Plug 'neovimhaskell/haskell-vim'           "  Better syntax-hihglighting for haskell
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
+  Plug 'roxma/nvim-yarp'                     " deoplete in vim8
+  Plug 'roxma/vim-hug-neovim-rpc'            " deoplete in vim8
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'skywind3000/asyncrun.vim'
