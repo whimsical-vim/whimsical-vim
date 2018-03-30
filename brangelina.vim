@@ -200,7 +200,6 @@ function! BrangelinaPlugins()
   Plug 'sodapopcan/vim-twiggy'               "  fugitve extension to manage branches
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
-  Plug 'tommcdo/vim-exchange'                "  text exchange operator
   Plug 'tpope/vim-abolish'                   "  Working with variants of a world
   Plug 'tpope/vim-commentary'                "  (Un)commenting lines
   Plug 'tpope/vim-eunuch'                    "  Unix commands
