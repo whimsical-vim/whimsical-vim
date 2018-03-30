@@ -5,18 +5,13 @@ syntax on
 
 :scriptencoding utf-8
 let &showbreak = '↪ '
-set backspace=2
 set clipboard=unnamed
 set completeopt+=longest
 set completeopt-=preview
 set cursorline
-set encoding=utf-8
 set expandtab
 set hidden
-set history=1000
 set hlsearch
-set incsearch
-set laststatus=2
 set mouse=a
 set nobackup
 set noswapfile
@@ -24,10 +19,9 @@ set number
 set omnifunc=syntaxcomplete#Complete
 set path=**
 set scrolloff=1
-set shell=/bin/bash                                             " required by gitgutter plugin
+set shell=/bin/bash " required by gitgutter plugin
 set shiftround
 set shiftwidth=2
-set smarttab
 set splitbelow
 set splitright
 set tabstop=2
@@ -36,7 +30,6 @@ set ttyfast
 set undodir=~/tmp/vim/undo
 set undofile
 set wildignorecase
-set wildmenu
 set wildmode=full
 
 " # Plugin configuration
@@ -185,6 +178,7 @@ function! BrangelinaPlugins()
   Plug 'tpope/vim-jdaddy'                    "  JSON manipulation commands
   Plug 'tpope/vim-repeat'                    "  Use dot operator with plugins
   Plug 'tpope/vim-rhubarb'                   "  Fugitive Github extension
+  Plug 'tpope/vim-sensible'                  " Defaults everyone can agree on
   Plug 'tpope/vim-speeddating'               "  Manipulation of date strings
   Plug 'tpope/vim-surround'                  "  Commands to work with surroundings
   Plug 'tpope/vim-unimpaired'                "  Miscellaneous commands
