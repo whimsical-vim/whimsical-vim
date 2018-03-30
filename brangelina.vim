@@ -74,6 +74,8 @@ let g:asyncrun_open = 8
 let g:neoterm_autoscroll = 1
 let g:neoterm_autoinsert = 1
 let g:neoterm_default_mod = 'tab'
+let g:startify_change_to_vcs_root = 1
+let g:startify_session_delete_buffers = 1
 " # Misc configuration
 hi Comment cterm=italic
 
@@ -217,6 +219,7 @@ function! BrangelinaPlugins()
   Plug 'kana/vim-textobj-user'               "  User-defined text objects
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
   Plug 'machakann/vim-highlightedyank'
+  Plug 'mhinz/vim-startify'                  " startup page
   Plug 'nelstrom/vim-textobj-rubyblock'      "  Ruby-specific text objects
   Plug 'neovimhaskell/haskell-vim'           "  Better syntax-hihglighting for haskell
   Plug 'roxma/nvim-yarp'
