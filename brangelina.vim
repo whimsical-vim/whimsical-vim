@@ -209,7 +209,6 @@ function! BrangelinaPlugins()
   Plug 'tpope/vim-surround'                  "  Commands to work with surroundings
   Plug 'tpope/vim-unimpaired'                "  Miscellaneous commands
   Plug 'tpope/vim-vinegar'                   "  netrw replacement
-  Plug 'troydm/zoomwintab.vim'               "  zoom windows with <c-w>o
   Plug 'vim-scripts/CursorLineCurrentWindow' "  Only show the cursorline in the active window
   Plug 'w0rp/ale'                            "  Asynchronous linter
 endfunction
