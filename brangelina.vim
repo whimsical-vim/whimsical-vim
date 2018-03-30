@@ -155,26 +155,6 @@ augroup END
 " # Commands
 " reload .config/nvim/init.vim
 command! ReloadConfig execute "source ~/.config/nvim/init.vim"
-" close hidden buffers
-command! -nargs=* Only call CloseHiddenBuffers()
-function! CloseHiddenBuffers()
-    " figure out which buffers are visible in any tab
-    let l:visible = {}
-    for l:t in range(1, tabpagenr('$'))
-        for l:b in tabpagebuflist(l:t)
-            let l:visible[l:b] = 1
-        endfor
-    endfor
-    " close any buffer that are loaded and not visible
-    let l:tally = 0
-    for l:b in range(1, bufnr('$'))
-        if bufloaded(l:b) && !has_key(l:visible, l:b)
-            let l:tally += 1
-            exe 'bw ' . l:b
-        endif
-    endfor
-    echon 'Deleted ' . l:tally . ' buffers'
-endfun
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -191,6 +171,7 @@ function! BrangelinaPlugins()
   Plug 'Shougo/neoyank.vim'
   Plug 'airblade/vim-gitgutter'              "  Column with line changes
   Plug 'amiorin/vim-fenced-code-blocks'      "  Edit code in Markdown code blocks
+  Plug 'arithran/vim-delete-hidden-buffers'
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
   Plug 'editorconfig/editorconfig-vim'       "  Settings based on .editorconfig file
   Plug 'elentok/todo.vim'                    "  Todo.txt support
