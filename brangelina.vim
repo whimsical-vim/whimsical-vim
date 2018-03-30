@@ -82,16 +82,9 @@ if !isdirectory(expand(&undodir))
    call mkdir(expand(&undodir), 'p')
 endif
 
-function! ExecuteMacroOverVisualRange()
-  echo '@'.getcmdline()
-  execute ":'<,'>normal @".nr2char(getchar())
-endfunction
-
 " # Mappings
 let g:mapleader=' '
 let g:maplocalleader='\'
-
-xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
 " Smart redraw (also clears current search highlighting)
 nnoremap <silent> <leader>l :nohlsearch<cr>:diffupdate<cr>:syntax sync fromstart<cr><c-l>
