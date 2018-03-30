@@ -39,21 +39,9 @@ set wildignorecase
 set wildmenu
 set wildmode=full
 
-" Theme
-let g:lightline = {
-  \   'active': {
-  \     'left': [
-  \       [ 'mode', 'paste' ],
-  \       [ 'readonly', 'filename', 'modified', 'ale' ]
-  \     ]
-  \   },
-  \   'component_function': {
-  \     'ale': 'ALEGetStatusLine'
-  \   }
-  \ }
-
 " # Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
+let g:airline_theme='atomic' " nice with almost all colorschemes
 let g:ale_elm_make_use_global=1
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 let g:ale_sign_error = '✗'
@@ -177,7 +165,6 @@ function! BrangelinaPlugins()
   Plug 'godlygeek/tabular'                   "  align stuff
   Plug 'haya14busa/incsearch.vim'            "  Improved incremental searching
   Plug 'idris-hackers/idris-vim'             "  Idris mode
-  Plug 'itchyny/lightline.vim'               "  Status bar
   Plug 'janko-m/vim-test'                    "  run tests async
   Plug 'junegunn/fzf'                        "  Fuzzy file searching
   Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
@@ -208,6 +195,8 @@ function! BrangelinaPlugins()
   Plug 'tpope/vim-surround'                  "  Commands to work with surroundings
   Plug 'tpope/vim-unimpaired'                "  Miscellaneous commands
   Plug 'tpope/vim-vinegar'                   "  netrw replacement
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-scripts/CursorLineCurrentWindow' "  Only show the cursorline in the active window
   Plug 'w0rp/ale'                            "  Asynchronous linter
 endfunction
