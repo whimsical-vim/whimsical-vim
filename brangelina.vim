@@ -130,8 +130,6 @@ nnoremap <C-h> :Twiggy<cr>
 " # Autocmds
 augroup customCommands
   autocmd!
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
-  autocmd BufRead,BufNewFile *.sjs set filetype=javascript
   " Sort files in buffer, but keep the cursor on the file we came from.
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
