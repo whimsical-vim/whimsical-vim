@@ -124,9 +124,8 @@ map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
 
 " git
-nnoremap <leader>gs :Gstatus<cr>
-nnoremap <leader>gd :Gdiff<cr>
-nnoremap <leader>gg :Twiggy<cr>
+nnoremap <C-g> :Gstatus<cr>
+nnoremap <C-h> :Twiggy<cr>
 
 " # Autocmds
 augroup customCommands
