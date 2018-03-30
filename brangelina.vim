@@ -123,10 +123,6 @@ map /  <plug>(incsearch-forward)
 map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
 
-" tabs
-nnoremap <leader>tt :tabnew<cr>
-nnoremap <leader>tc :tabclose<cr>
-
 " git
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gd :Gdiff<cr>
