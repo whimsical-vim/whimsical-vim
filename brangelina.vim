@@ -111,7 +111,6 @@ nnoremap <leader>y :FZFNeoyank<cr>
 nnoremap <leader>Y :FZFNeoyank " P<cr>
 vnoremap <leader>y :FZFNeoyankSelection<cr>
 
-" Terminal
 " Terminal mappings
 nnoremap <silent> <C-T> :<c-u>exec v:count.'Ttoggle'<cr>
 tnoremap <silent> <C-T> <C-\><C-n>:<c-u>exec v:count.'Ttoggle'<cr>
