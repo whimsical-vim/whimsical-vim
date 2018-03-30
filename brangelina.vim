@@ -188,11 +188,9 @@ function! BrangelinaPlugins()
   Plug 'junegunn/vader.vim'                  "  vim test framework
   Plug 'justinhoward/fzf-neoyank'
   Plug 'justinmk/vim-sneak'                  "  Medium-range motion
-  Plug 'kana/vim-textobj-user'               "  User-defined text objects
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
   Plug 'machakann/vim-highlightedyank'
   Plug 'mhinz/vim-startify'                  " startup page
-  Plug 'nelstrom/vim-textobj-rubyblock'      "  Ruby-specific text objects
   Plug 'neovimhaskell/haskell-vim'           "  Better syntax-hihglighting for haskell
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
