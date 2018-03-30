@@ -197,7 +197,6 @@ function! BrangelinaPlugins()
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'skywind3000/asyncrun.vim'
-  Plug 'slashmili/alchemist.vim'             "  mix integration for elixir
   Plug 'sodapopcan/vim-twiggy'               "  fugitve extension to manage branches
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
