@@ -111,6 +111,17 @@ nnoremap <leader>/ mN:History/<cr>
 nnoremap <leader>: mN:History:<cr>
 nnoremap <leader>? mN:Helptags<cr>
 
+" Autocompletion fzf
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+
+" fzf yank
+nnoremap <leader>y :FZFNeoyank<cr>
+nnoremap <leader>Y :FZFNeoyank " P<cr>
+vnoremap <leader>y :FZFNeoyankSelection<cr>
+
 " Terminal
 " Terminal mappings
 nnoremap <silent> <C-T> :<c-u>exec v:count.'Ttoggle'<cr>
@@ -199,6 +210,7 @@ command! -bang -nargs=? -complete=dir Files
 " # Plugins
 function! BrangelinaPlugins()
   Plug 'Shougo/deoplete.nvim'
+  Plug 'Shougo/neoyank.vim'
   Plug 'airblade/vim-gitgutter'              "  Column with line changes
   Plug 'amiorin/vim-fenced-code-blocks'      "  Edit code in Markdown code blocks
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
@@ -215,6 +227,7 @@ function! BrangelinaPlugins()
   Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
   Plug 'junegunn/goyo.vim'                   "  A no-chrome mode for conentrated writing
   Plug 'junegunn/vader.vim'                  "  vim test framework
+  Plug 'justinhoward/fzf-neoyank'
   Plug 'justinmk/vim-sneak'                  "  Medium-range motion
   Plug 'kana/vim-textobj-user'               "  User-defined text objects
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
