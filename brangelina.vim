@@ -3,18 +3,18 @@ filetype plugin indent on
 runtime! macros/matchit.vim
 syntax on
 
-set encoding=utf-8
 :scriptencoding utf-8
+let &showbreak = '↪ '
 set backspace=2
 set clipboard=unnamed
 set completeopt+=longest
 set completeopt-=preview
 set cursorline
+set encoding=utf-8
 set expandtab
 set hidden
 set history=1000
 set hlsearch
-" doesn't work in vim8 set inccommand=nosplit
 set incsearch
 set laststatus=2
 set mouse=a
@@ -22,11 +22,11 @@ set nobackup
 set noswapfile
 set number
 set omnifunc=syntaxcomplete#Complete
+set path=**
 set scrolloff=1
 set shell=/bin/bash                                             " required by gitgutter plugin
 set shiftround
 set shiftwidth=2
-let &showbreak = '↪ '
 set smarttab
 set splitbelow
 set splitright
@@ -38,8 +38,6 @@ set undofile
 set wildignorecase
 set wildmenu
 set wildmode=full
-set path=**
-let g:netrw_liststyle=1
 
 " Theme
 let g:lightline = {
@@ -56,27 +54,28 @@ let g:lightline = {
 
 " # Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
-let g:elm_format_autosave = 0
-let g:elm_make_show_warnings = 1
-let g:fzf_layout = { 'window': 'enew' }
+let g:ale_elm_make_use_global=1
+let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
 let g:ale_statusline_format = ['✗ %d', '! %d', '✓']
-let g:elm_setup_keybindings = 0
-let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
-let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
-let g:test#strategy = 'neoterm'
-let g:polyglot_disabled = ['haskell']
-let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
-let g:ale_elm_make_use_global=1
-let g:deoplete#enable_at_startup = 1
 let g:asyncrun_open = 8
-let g:neoterm_autoscroll = 1
+let g:deoplete#enable_at_startup = 1
+let g:elm_format_autosave = 0
+let g:elm_make_show_warnings = 1
+let g:elm_setup_keybindings = 0
+let g:fzf_layout = { 'window': 'enew' }
+let g:haskell_indent_disable=1 "Automatic indenting and hindent don't agree
+let g:localvimrc_persistent=2 "See plugin: embear/vim-localvimrc
 let g:neoterm_autoinsert = 1
+let g:neoterm_autoscroll = 1
 let g:neoterm_default_mod = 'tab'
+let g:netrw_liststyle=1
+let g:polyglot_disabled = ['haskell']
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_delete_buffers = 1
-" # Misc configuration
+let g:test#strategy = 'neoterm'
+
 hi Comment cterm=italic
 
 if !isdirectory(expand(&undodir))
