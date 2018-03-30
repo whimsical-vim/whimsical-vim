@@ -149,9 +149,6 @@ augroup customCommands
   nmap <silent> <localleader>a :TestSuite<CR>
   nmap <silent> <localleader>l :TestLast<CR>
   nmap <silent> <localleader>g :TestVisit<CR>
-  autocmd VimEnter *
-  \ command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, '', { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
   autocmd BufWritePre * Neoformat
 augroup END
 
