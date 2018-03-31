@@ -138,7 +138,6 @@ augroup customCommands
 augroup END
 
 " # Commands
-" reload .config/nvim/init.vim
 command! ReloadConfig execute "source ~/.config/nvim/init.vim"
 
 command! -bang -nargs=* Rg
