@@ -117,8 +117,6 @@ nnoremap <C-h> :MerginalToggle<cr>
 " # Autocmds
 augroup customCommands
   autocmd!
-  " Sort files in buffer, but keep the cursor on the file we came from.
-  autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
   autocmd FileType elm nmap <buffer> <localleader>m :ElmMake<cr>
   autocmd FileType elm nmap <buffer> <localleader>M :ElmMakeMain<cr>
