@@ -46,7 +46,6 @@ let g:ale_elm_make_use_global=1
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
-let g:ale_statusline_format = ['✗ %d', '! %d', '✓']
 let g:asyncrun_open = 8
 let g:deoplete#enable_at_startup = 1
 let g:elm_format_autosave = 0
