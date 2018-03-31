@@ -112,7 +112,7 @@ map g/ <plug>(incsearch-stay)
 
 " git
 nnoremap <C-g> :Gstatus<cr>
-nnoremap <C-h> :Twiggy<cr>
+nnoremap <C-h> :MerginalToggle<cr>
 
 " # Autocmds
 augroup customCommands
@@ -170,6 +170,7 @@ function! BrangelinaPlugins()
   Plug 'embear/vim-localvimrc'               "  Support project-specific vim configurations
   Plug 'godlygeek/tabular'                   "  align stuff
   Plug 'haya14busa/incsearch.vim'            "  Improved incremental searching
+  Plug 'idanarye/vim-merginal'
   Plug 'idris-hackers/idris-vim'             "  Idris mode
   Plug 'janko-m/vim-test'                    "  run tests async
   Plug 'junegunn/fzf'                        "  Fuzzy file searching
@@ -184,7 +185,6 @@ function! BrangelinaPlugins()
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'skywind3000/asyncrun.vim'
-  Plug 'sodapopcan/vim-twiggy'               "  fugitve extension to manage branches
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
   Plug 'tpope/vim-abolish'                   "  Working with variants of a world
