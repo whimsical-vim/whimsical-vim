@@ -46,7 +46,6 @@ let g:ale_elm_make_use_global=1
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '!'
-let g:asyncrun_open = 8
 let g:deoplete#enable_at_startup = 1
 let g:elm_format_autosave = 0
 let g:elm_make_show_warnings = 1
@@ -179,7 +178,6 @@ function! BrangelinaPlugins()
   Plug 'neovimhaskell/haskell-vim'           "  Better syntax-hihglighting for haskell
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
-  Plug 'skywind3000/asyncrun.vim'
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
   Plug 'tpope/vim-abolish'                   "  Working with variants of a world
