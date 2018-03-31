@@ -62,8 +62,6 @@ let g:startify_change_to_vcs_root = 1
 let g:startify_session_delete_buffers = 1
 let g:test#strategy = 'neoterm'
 
-hi Comment cterm=italic
-
 if !isdirectory(expand(&undodir))
    call mkdir(expand(&undodir), 'p')
 endif
