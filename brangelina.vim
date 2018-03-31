@@ -120,12 +120,12 @@ augroup customCommands
   " Sort files in buffer, but keep the cursor on the file we came from.
   autocmd BufWritePre * :%s/\s\+$//e  " automatically remove trailing whitespace on writing
   " Elm key bindings
-  autocmd FileType elm nmap <buffer> <localleader>m <Plug>(elm-make)
-  autocmd FileType elm nmap <buffer> <localleader>M <Plug>(elm-make-main)
-  autocmd FileType elm nmap <buffer> <localleader>t <Plug>(elm-test)
-  autocmd FileType elm nmap <buffer> <localleader>r <Plug>(elm-repl)
-  autocmd FileType elm nmap <buffer> <localleader>d <Plug>(elm-show-docs)
-  autocmd FileType elm nmap <buffer> <localleader>D <Plug>(elm-browse-docs)
+  autocmd FileType elm nmap <buffer> <localleader>m :ElmMake<cr>
+  autocmd FileType elm nmap <buffer> <localleader>M :ElmMakeMain<cr>
+  autocmd FileType elm nmap <buffer> <localleader>t :ElmTest<cr>
+  autocmd FileType elm nmap <buffer> <localleader>r :ElmRepl<cr>
+  autocmd FileType elm nmap <buffer> <localleader>d :ElmShowDocs<cr>
+  autocmd FileType elm nmap <buffer> <localleader>D :ElmBrowseDocs<cr>
   autocmd FileType elm set tabstop=4
   autocmd FileType elm set shiftwidth=4
   nmap <silent> <localleader>e <Plug>(ale_detail)
@@ -165,7 +165,6 @@ function! BrangelinaPlugins()
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
   Plug 'editorconfig/editorconfig-vim'       "  Settings based on .editorconfig file
   Plug 'elentok/todo.vim'                    "  Todo.txt support
-  Plug 'elmcast/elm-vim'                     "  Elm language syntac
   Plug 'embear/vim-localvimrc'               "  Support project-specific vim configurations
   Plug 'godlygeek/tabular'                   "  align stuff
   Plug 'haya14busa/incsearch.vim'            "  Improved incremental searching
