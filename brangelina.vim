@@ -23,7 +23,7 @@ set splitbelow
 set splitright
 set tabstop=2
 set termguicolors
-set ttyfast
+set ttyfast " removed in nvim
 set undodir=~/tmp/vim/undo
 set undofile
 set wildignorecase
