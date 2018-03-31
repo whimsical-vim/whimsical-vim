@@ -171,7 +171,6 @@ function! BrangelinaPlugins()
   Plug 'junegunn/goyo.vim'                   "  A no-chrome mode for conentrated writing
   Plug 'junegunn/vader.vim'                  "  vim test framework
   Plug 'justinhoward/fzf-neoyank'
-  Plug 'justinmk/vim-sneak'                  "  Medium-range motion
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
   Plug 'machakann/vim-highlightedyank'
   Plug 'mhinz/vim-startify'                  " startup page
