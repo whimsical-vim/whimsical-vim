@@ -1,6 +1,5 @@
 " # Global settings
 filetype plugin indent on
-runtime! macros/matchit.vim
 syntax on
 
 :scriptencoding utf-8
