@@ -11,14 +11,11 @@ set completeopt-=preview
 set cursorline
 set expandtab
 set hidden
-set hlsearch
 set mouse=a
-set nobackup
 set noswapfile
 set number
 set omnifunc=syntaxcomplete#Complete
 set path=**
-set scrolloff=1
 set shell=/bin/bash " required by gitgutter plugin
 set shiftround
 set shiftwidth=2
@@ -30,7 +27,6 @@ set ttyfast
 set undodir=~/tmp/vim/undo
 set undofile
 set wildignorecase
-set wildmode=full
 
 " # Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
