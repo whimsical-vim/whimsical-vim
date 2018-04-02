@@ -49,6 +49,7 @@ let g:polyglot_disabled = ['haskell']
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_delete_buffers = 1
 let g:test#strategy = 'neoterm'
+let $FZF_DEFAULT_OPTS .= ' --no-height' " fixes fzf in nvim terminals
 
 if !isdirectory(expand(&undodir))
    call mkdir(expand(&undodir), 'p')
