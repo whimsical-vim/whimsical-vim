@@ -29,6 +29,7 @@ set wildignorecase
 
 " # Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
+let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='atomic' " nice with almost all colorschemes
 let g:ale_elm_make_use_global=1
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
