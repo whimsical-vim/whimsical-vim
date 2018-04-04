@@ -30,6 +30,7 @@ set wildignorecase
 " # Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#vimagit#enabled = 1
 let g:airline_theme='atomic' " nice with almost all colorschemes
 let g:ale_elm_make_use_global=1
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
@@ -97,7 +98,7 @@ map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
 
 " git
-nnoremap <C-g> :Gstatus<cr>
+nnoremap <C-g> :Magit<cr>
 nnoremap <C-h> :MerginalToggle<cr>
 
 " # Autocmds
@@ -155,6 +156,7 @@ function! BrangelinaPlugins()
   Plug 'idanarye/vim-merginal'
   Plug 'idris-hackers/idris-vim'             "  Idris mode
   Plug 'janko-m/vim-test'                    "  run tests async
+  Plug 'jreybert/vimagit'
   Plug 'junegunn/fzf'                        "  Fuzzy file searching
   Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
   Plug 'junegunn/goyo.vim'                   "  A no-chrome mode for conentrated writing
