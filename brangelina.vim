@@ -98,7 +98,7 @@ map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
 
 " git
-nnoremap <C-g> :Magit<cr>
+nnoremap <C-g> :MagitOnly<cr>
 nnoremap <C-h> :MerginalToggle<cr>
 
 " # Autocmds
