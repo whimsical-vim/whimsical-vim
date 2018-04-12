@@ -13,7 +13,6 @@ set hidden
 set mouse=a
 set noswapfile
 set number
-set omnifunc=syntaxcomplete#Complete
 set path=**
 set shell=/bin/bash " required by gitgutter plugin
 set shiftround
@@ -30,6 +29,7 @@ set wildignorecase
 " # Plugin configuration
 let g:EditorConfig_exclude_patterns = ['.git/COMMIT_EDITMSG']
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#vimagit#enabled = 1
 let g:airline_theme='atomic' " nice with almost all colorschemes
 let g:ale_elm_make_use_global=1
 let g:ale_linters = { 'haskell': ['hlint', 'hdevtools'] }
@@ -97,8 +97,13 @@ map ?  <plug>(incsearch-backward)
 map g/ <plug>(incsearch-stay)
 
 " git
-nnoremap <C-g> :Gstatus<cr>
+nnoremap <C-g> :MagitOnly<cr>
 nnoremap <C-h> :MerginalToggle<cr>
+
+" nvim-completion-manager
+" use <TAB> to select the popup menu
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " # Autocmds
 augroup customCommands
@@ -135,11 +140,8 @@ command! -bang -nargs=? -complete=dir Files
 
 " # Plugins
 function! BrangelinaPlugins()
-  if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
+  Plug 'roxma/nvim-completion-manager'
+  if !has('nvim')
     Plug 'roxma/vim-hug-neovim-rpc'
   endif
   Plug 'Shougo/neoyank.vim'
@@ -155,6 +157,7 @@ function! BrangelinaPlugins()
   Plug 'idanarye/vim-merginal'
   Plug 'idris-hackers/idris-vim'             "  Idris mode
   Plug 'janko-m/vim-test'                    "  run tests async
+  Plug 'jreybert/vimagit'
   Plug 'junegunn/fzf'                        "  Fuzzy file searching
   Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
   Plug 'junegunn/goyo.vim'                   "  A no-chrome mode for conentrated writing
@@ -164,9 +167,12 @@ function! BrangelinaPlugins()
   Plug 'machakann/vim-highlightedyank'
   Plug 'mhinz/vim-startify'                  " startup page
   Plug 'neovimhaskell/haskell-vim'           "  Better syntax-hihglighting for haskell
+  Plug 'roxma/ncm-elm-oracle'
+  Plug 'roxma/ncm-rct-complete'
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
+  Plug 'stoeffel/notes.vim'                  "  take notes
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
   Plug 'tpope/vim-abolish'                   "  Working with variants of a world
   Plug 'tpope/vim-commentary'                "  (Un)commenting lines
