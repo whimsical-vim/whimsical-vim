@@ -169,6 +169,7 @@ function! BrangelinaPlugins()
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
+  Plug 'stoeffel/notes.vim'                  "  take notes
   Plug 'tommcdo/vim-exchange'                "  text exchange operator
   Plug 'tpope/vim-abolish'                   "  Working with variants of a world
   Plug 'tpope/vim-commentary'                "  (Un)commenting lines
