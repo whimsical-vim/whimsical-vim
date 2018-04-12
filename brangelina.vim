@@ -13,7 +13,6 @@ set hidden
 set mouse=a
 set noswapfile
 set number
-set omnifunc=syntaxcomplete#Complete
 set path=**
 set shell=/bin/bash " required by gitgutter plugin
 set shiftround
@@ -101,6 +100,11 @@ map g/ <plug>(incsearch-stay)
 nnoremap <C-g> :MagitOnly<cr>
 nnoremap <C-h> :MerginalToggle<cr>
 
+" nvim-completion-manager
+" use <TAB> to select the popup menu
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
 " # Autocmds
 augroup customCommands
   autocmd!
@@ -136,11 +140,8 @@ command! -bang -nargs=? -complete=dir Files
 
 " # Plugins
 function! BrangelinaPlugins()
-  if has('nvim')
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  else
-    Plug 'Shougo/deoplete.nvim'
-    Plug 'roxma/nvim-yarp'
+  Plug 'roxma/nvim-completion-manager'
+  if !has('nvim')
     Plug 'roxma/vim-hug-neovim-rpc'
   endif
   Plug 'Shougo/neoyank.vim'
@@ -166,6 +167,8 @@ function! BrangelinaPlugins()
   Plug 'machakann/vim-highlightedyank'
   Plug 'mhinz/vim-startify'                  " startup page
   Plug 'neovimhaskell/haskell-vim'           "  Better syntax-hihglighting for haskell
+  Plug 'roxma/ncm-elm-oracle'
+  Plug 'roxma/ncm-rct-complete'
   Plug 'sbdchd/neoformat'                    "  Automatic code formatting
   Plug 'sheerun/vim-polyglot'                "  Combines a whole bunch of vim syntax packs
   Plug 'stefandtw/quickfix-reflector.vim'    "  Make quickfix window editable
