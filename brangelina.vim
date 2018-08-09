@@ -15,6 +15,7 @@ set noswapfile
 set number
 set path=**
 set shell=/bin/bash " required by gitgutter plugin
+set updatetime=100  " ensures gitgutter updates every 100ms
 set shiftround
 set shiftwidth=2
 set splitbelow
