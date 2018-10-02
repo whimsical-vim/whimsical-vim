@@ -141,7 +141,7 @@ command! -bang -nargs=? -complete=dir Files
 
 " # Plugins
 function! BrangelinaPlugins()
-  Plug 'roxma/nvim-completion-manager'
+  Plug 'ncm2/ncm2'
   if !has('nvim')
     Plug 'roxma/vim-hug-neovim-rpc'
   endif
