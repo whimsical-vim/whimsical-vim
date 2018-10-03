@@ -13,7 +13,7 @@ call plug#end()
 
 " (4) Configure the theme you want to use below.
 colorscheme NeoSolarized
-let g:lightline.colorscheme = 'solarized'
+let g:lightline = { 'colorscheme': 'solarized' }
 set background=dark
 let g:neoterm_shell = 'zsh'
 
