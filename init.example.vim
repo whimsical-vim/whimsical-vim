@@ -2,11 +2,11 @@
 
 " (1) Copy this file to ~/.config/nvim/init.vim
 
-" (2) Replace this with a path to brangelina on your machine.
-source ~/.brangelina.vim
+" (2) Replace this with a path to whimsical on your machine.
+source ~/.whimsical.vim
 
 call plug#begin('~/.vim/plugged')
-  call BrangelinaPlugins()
+  call WhimsicalPlugins()
   " (3) Add your custom plugins below.
   Plug 'iCyMind/NeoSolarized'
 call plug#end()
