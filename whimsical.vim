@@ -140,7 +140,7 @@ command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' }, <bang>0)
 
 " # Plugins
-function! BrangelinaPlugins()
+function! WhimsicalPlugins()
   Plug 'ncm2/ncm2'
   if !has('nvim')
     Plug 'roxma/vim-hug-neovim-rpc'
