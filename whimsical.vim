@@ -5,6 +5,7 @@ syntax on
 :scriptencoding utf-8
 let &showbreak = '↪ '
 set clipboard=unnamed
+set completefunc=emoji#complete
 set completeopt+=longest
 set completeopt-=preview
 set cursorline
@@ -163,6 +164,7 @@ function! WhimsicalPlugins()
   Plug 'junegunn/fzf.vim'                    "  vim bindings for fzf
   Plug 'junegunn/goyo.vim'                   "  A no-chrome mode for conentrated writing
   Plug 'junegunn/vader.vim'                  "  vim test framework
+  Plug 'junegunn/vim-emoji'                  "  Emoji-support and autocomplete
   Plug 'justinhoward/fzf-neoyank'
   Plug 'kassio/neoterm'                      "  Wrapper of some neovim's :terminal functions.
   Plug 'machakann/vim-highlightedyank'
