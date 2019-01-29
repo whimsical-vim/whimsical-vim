@@ -4,7 +4,7 @@ syntax on
 
 :scriptencoding utf-8
 let &showbreak = '↪ '
-set clipboard=unnamed
+set clipboard^=unnamed,unnamedplus
 set completefunc=emoji#complete
 set completeopt+=longest
 set completeopt-=preview
