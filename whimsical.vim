@@ -150,6 +150,7 @@ function! WhimsicalPlugins()
   Plug 'airblade/vim-gitgutter'              "  Column with line changes
   Plug 'amiorin/vim-fenced-code-blocks'      "  Edit code in Markdown code blocks
   Plug 'arithran/vim-delete-hidden-buffers'
+  Plug 'arthurxavierx/vim-caser'
   Plug 'bronson/vim-visual-star-search'      "  Easily search for the selected text
   Plug 'editorconfig/editorconfig-vim'       "  Settings based on .editorconfig file
   Plug 'elentok/todo.vim'                    "  Todo.txt support
