@@ -133,7 +133,7 @@ command! ReloadConfig execute "source ~/.config/nvim/init.vim"
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1,
+  \   'rg --hidden --column --line-number --no-heading --color=always '.shellescape(<q-args>).'| tr -d "\017"', 1,
   \   { 'options': '--bind ctrl-a:select-all,ctrl-d:deselect-all' },
   \   <bang>0)
 
